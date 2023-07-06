@@ -1,27 +1,39 @@
 import React from 'react';
 import { useState } from 'react';
+import { userPassData } from './User_Pass'
 
 const Login = () => {
   const [user, setUser] = useState('')
   const [pass, setPass] = useState('')
   const [invalid, setInvalid] = useState(false)
+  let valid = false
 
-  function validateLogin(){
-    if(user.trim().length === 0 && pass.trim().length === 0){
-      //alert("Invalid Username or Password")
+  function incorrectLogin(){
+    if(!valid){
       setInvalid(true)
-
+  
       setTimeout(() => {
         setInvalid(false)
-      }, 4000)
+      }, 3000)
     }
+  }
+
+  function validateLogin(){
+    userPassData.map((data, key) => {
+      if(user.trim() === data.username && pass.trim() === data.password){
+        alert("Success!")
+        valid = true
+      }
+    })
+
+    incorrectLogin()
   }
 
   const handleUserChange = event => {
     setUser(event.target.value)
   }
   const handlePassChange = event => {
-    setUser(event.target.value)
+    setPass(event.target.value)
   }
 
     return (
