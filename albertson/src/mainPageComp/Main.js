@@ -11,6 +11,7 @@ export default function Main(){
             </div>
             <div className="Upload">
                 <button className='viewUploadsBtn'>View All Uploads</button>
+                <input type="file" />
             </div>
             <div className='viewPlaylist'>  
                 <button className="viewPlaylistBtn">View All Playlists</button>
