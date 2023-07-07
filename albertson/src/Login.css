@@ -5,7 +5,9 @@
   
 .left-side {
     flex: 0 0 30%;
+    background-image: url(C:\Users\sarukani\Retail\albertson\src\firstpage.png);
     background-color: #20509C;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,22 +21,19 @@
     align-items: center;
     text-align:center;
 }
-h1 {
-    position: absolute;
-    bottom:63%;
-    font-size: 80;
-    text-align: center;   
-}
+
 
 h4{
     position:absolute;
     bottom: 55%;
     text-align:center;
+    color: grey;
 }
 
 .email{
     position:absolute;
     bottom:48%;
+    left:49%;
     padding:10px;
     border: 3px solid rgb(197, 199, 198);
     border-radius:15px;
@@ -46,6 +45,7 @@ h4{
 .pass{
     position:absolute;
     bottom: 38%;
+    left:49%;
     padding:10px;
     border: 3px solid rgb(197, 199, 198);
     border-radius:15px;
@@ -56,13 +56,13 @@ h4{
 
 .loginBtn{
     position:absolute;
-    bottom: 20%;
+    bottom: 25%;
     padding:10px;
     border: 3px solid rgb(197, 199, 198);
-    border-radius:20px;
+    border-radius:15px;
     outline:none;
-    width:35%;
-    height: 10%;
+    width:33%;
+    height: 8%;
     text-align:center;
     background-color:darkblue;
     font-size: 20px;
