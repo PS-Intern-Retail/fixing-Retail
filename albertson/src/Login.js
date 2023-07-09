@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import { userPassData } from './User_Pass'
+import firstpage from './firstpage.png';
+import logo from './logo.svg';
 
 const Login = () => {
   const [user, setUser] = useState('')
@@ -39,7 +41,6 @@ const Login = () => {
     return (
       <div className="split-container">
         <div className="left-side">
-          <h2>Sarah</h2>
         </div>
         <div className="right-side">
           <h1>Login </h1>
@@ -58,5 +59,19 @@ const Login = () => {
   }  
   
 export default Login;
+        <img src={logo} alt="Logo" />
+      
+          <div>
+          <input className='Enter your email' placeholder='Email'></input>
+          </div>
+          <div>
+          <input className='pass' placeholder='Password'></input>
+          </div>
+          <button className='loginBtn'>Login</button> 
+        </div>
+      </div>
+    )
+  }
+  export default Login;
 
 
