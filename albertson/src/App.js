@@ -1,8 +1,8 @@
 import './App.css';
-import Main from './Main.js'
-import Login from './Login.js';
-import './Login.css';
-import logo from './logo.svg';
+import Main from './mainComp/Main.js'
+import Login from './loginComp/Login.js';
+import './loginComp/Login.css';
+import logo from './images/logo.svg';
 
 function App() {
   return (
