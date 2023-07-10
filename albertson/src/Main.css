@@ -72,20 +72,72 @@
     background-color: #e3f9ff;
 }
 
-.chatBoxInput{
-    padding: 10px;
-    width: 93%;
-    border: none;
-    border-radius: 14px;
-    position:absolute;
-    top: 90%;
-    left: 2%;
-}
-
 .icon{
     height: 8%;
     width: 4%;
     position: absolute;
     top: 2.5%;
     left: 94%;
+}
+
+.detailedDescrip{
+    padding: 10px;
+    width: 45%;
+    height: 40%;
+    background-color: #EAEAEA;
+    border: 3px solid #EAEAEA;
+    border-radius: 18px;
+    position: absolute;
+    top: 7%;
+    left: 1%;
+}
+
+.reccomendations{
+    padding: 10px;
+    width: 43%;
+    height: 51%;
+    background-color: #FFFFFF;
+    border: 3px solid #FFFFFF;
+    border-radius: 18px;
+    position: absolute;
+    top: 7%;
+    left: 52%;
+}
+
+.generateBtn{
+    padding: 10px;
+    width: 49%;
+    height: 9%;
+    background-color: #20509C;
+    border: 3px solid #20509C;
+    border-radius: 14px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    top: 54%;
+    left: 1%;
+}
+
+.generateBtn:hover{
+    background-color: #3568ba;
+}
+
+.firstText{
+    position: absolute;
+    top: -3%;
+    left: 2%;
+}
+
+.secondText{
+    position: absolute;
+    top: -3%;
+    left: 53%;
+}
+
+.thirdText{
+    position: absolute;
+    top: 64%;
+    left: 2%;
 }
