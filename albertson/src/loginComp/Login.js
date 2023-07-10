@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { userPassData } from './User_Pass'
 import firstpage from './firstpage.png';
-import logo from './logo.svg';
+import logo from '../images/logo.svg';
 
 const Login = () => {
   const [user, setUser] = useState('')
