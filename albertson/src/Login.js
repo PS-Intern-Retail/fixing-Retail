@@ -43,7 +43,6 @@ const Login = () => {
         <div className="left-side">
         </div>
         <div className="right-side">
-          <h1>Login </h1>
           <h4>Sign in with your company email</h4>
           <input onChange={handleUserChange} className='email' placeholder='Email'></input>
           <input onChange={handlePassChange} className='pass' placeholder='Password'></input>
@@ -59,19 +58,19 @@ const Login = () => {
   }  
   
 export default Login;
-        <img src={logo} alt="Logo" />
+  //       <img src={logo} alt="Logo" />
       
-          <div>
-          <input className='Enter your email' placeholder='Email'></input>
-          </div>
-          <div>
-          <input className='pass' placeholder='Password'></input>
-          </div>
-          <button className='loginBtn'>Login</button> 
-        </div>
-      </div>
-    )
-  }
-  export default Login;
+  //         <div>
+  //         <input className='Enter your email' placeholder='Email'></input>
+  //         </div>
+  //         <div>
+  //         <input className='pass' placeholder='Password'></input>
+  //         </div>
+  //         <button className='loginBtn'>Login</button> 
+  //       </div>
+  //     </div>
+  //   )
+  // }
+  // export default Login;
 
 
