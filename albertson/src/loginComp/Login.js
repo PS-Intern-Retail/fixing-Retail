@@ -31,6 +31,8 @@ const Login = () => {
         alert("Success!");
         console.log("This is the current User:", currUser);
         valid = true;
+        const store = await Database.getStoreById(currUser.stores[0]);
+        console.log(store);
       } else {
         throw new Error("Invalid login credentials");
       }
