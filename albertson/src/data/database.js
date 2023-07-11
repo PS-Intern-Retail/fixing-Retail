@@ -31,6 +31,11 @@ export default class Database {
         }
     }
 
+    static async getAllUsers() {
+        const response = await fetch(`${backendOrigin}/users`);
+        const userData = await response.json();
+        return userData;
+    }
 
     static async getStoreById(storeId) {
         const response = await fetch(`${backendOrigin}/stores/${storeId}`);
