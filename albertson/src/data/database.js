@@ -31,6 +31,7 @@ export default class Database {
         }
     }
 
+
     static async getStoreById(storeId) {
         const response = await fetch(`${backendOrigin}/stores/${storeId}`);
         const storeData = await response.json();
@@ -45,5 +46,11 @@ export default class Database {
             storeList.push(Database.getStoreById(storeIds[i]));
         }
         return storeList;
+    }
+
+    static async getAllStores() {
+        const response = await fetch(`${backendOrigin}/stores`);
+        const storeData = await response.json();
+        return storeData;
     }
 }
