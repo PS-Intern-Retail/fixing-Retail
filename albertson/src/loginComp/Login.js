@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { userPassData } from './User_Pass'
 import firstpage from './firstpage.png';
 import logo from '../images/logo.svg';
+import Database from '../data/database';
 
 const Login = () => {
   const [user, setUser] = useState('')
@@ -19,17 +20,27 @@ const Login = () => {
       }, 3000)
     }
   }
-
-  function validateLogin(){
-    userPassData.map((data, key) => {
-      if(user.trim() === data.username && pass.trim() === data.password){
-        alert("Success!")
-        valid = true
+  async function validateLogin() {
+    try {
+      const currUser = await Database.postUserSession({
+        email: user,
+        password: pass,
+      });
+  
+      if (currUser !== undefined) {
+        alert("Success!");
+        console.log("This is the current User:", currUser);
+        valid = true;
+      } else {
+        throw new Error("Invalid login credentials");
       }
-    })
-
-    incorrectLogin()
+    } catch (error) {
+      // alert(error.message);
+      console.error("ERROR LOGGING-:-:", error);
+      incorrectLogin();
+    }
   }
+  
 
   const handleUserChange = event => {
     setUser(event.target.value)
