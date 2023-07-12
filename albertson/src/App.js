@@ -7,9 +7,10 @@ import logo from './images/logo.svg';
 function App() {
   return (
     <div>
-      <h1>Hi, welcome back!</h1>
-      <h4>Sign in with your company email</h4>
-      <Login></Login>
+      {/* <h1>Hi, welcome back!</h1>
+     <h4>Sign in with your company email</h4>
+     <Login></Login> */}
+      <Main></Main>
       <i class="fa fa-envelope-open"></i>
       
     <div className="App">
