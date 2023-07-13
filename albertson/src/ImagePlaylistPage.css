@@ -1,40 +1,79 @@
-.image-playlist-container {
-    width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
-    padding: 10px;
-    background-color: green; /* Set the background color to green */
+* {
+    box-sizing: border-box;
   }
   
-  .image-playlist {
-    display: inline-block;
+  body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: darkgreen;
+    border-radius: 10px;
+
   }
   
-  .image-slide {
-    display: inline-block;
-    margin-right: 10px;
+  .container {
+    display: flex;
+    width: 90vw;
+    border-radius: 10px;
   }
   
-  .image-slide img {
-    width: 300px; /* Adjust the width as needed */
-    height: auto;
+  .panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: all 700ms ease-in;
   }
   
-  
-  .centered-button {
-    margin-top: 20px;
+  .panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
   }
   
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
+  .panel.active {
+    flex: 5;
+  }
+  
+  .panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      width: 100vw;
     }
-    to {
-      opacity: 1;
+  
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+      display: none;
     }
   }
   
-  .fade-in {
-    animation: fadeIn 1s ease-in-out;
+ 
+ .view-all-button{
+    position: absolute;
+    bottom: 5px;
+    right: 550px; 
+    border-radius: 10px;
+    width: 250px;
+    height: 40px;
+
   }
+
+
   
