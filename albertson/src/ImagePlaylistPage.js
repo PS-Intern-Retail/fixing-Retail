@@ -14,11 +14,11 @@ const ImagePlaylistPage = () => {
   };
 
   const recommendationURLs = [
-    'https://th.bing.com/th/id/OIP.6tSSldzehqBowRd3mDzsDgAAAA?pid=ImgDet&rs=1',
-    'https://th.bing.com/th/id/OIP.6tSSldzehqBowRd3mDzsDgAAAA?pid=ImgDet&rs=1',
-    'https://static0.tiendeo.us/images/tiendas/52798/catalogos/1277282/paginas/mid2/00001.jpg',
-    'https://static0.tiendeo.us/images/tiendas/113552/catalogos/1264515/paginas/mid2/00001.jpg',
-    'https://static0.tiendeo.us/images/tiendas/113552/catalogos/1253229/paginas/mid2/00001.jpg',
+    'https://www.weeklyadpro.com/wp-content/uploads/2020/10/Albertsons_1021_1027_1.jpg',
+    'https://i.pinimg.com/736x/76/17/8d/76178d19b9e7d3755c60b5c4c0fe85ef.jpg',
+    'https://th.bing.com/th/id/OIP.tQTbihTAmqpjhdZFk3ytGQHaRf?pid=ImgDet&w=148&h=350&c=7&dpr=1.5',
+    'https://th.bing.com/th/id/OIP.MlYyjJNqewxlq-KIybfuGQHaM9?pid=ImgDet&w=171&h=299&c=7&dpr=1.5',
+    'https://th.bing.com/th/id/OIP.e3qBsIbxz4DiiPwbAjOqFQHaOJ?pid=ImgDet&w=171&h=326&c=7&dpr=1.5',
   ];
 
   return (

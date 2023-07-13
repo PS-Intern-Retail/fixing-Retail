@@ -3,10 +3,6 @@ import './App.css';
 import Main from './mainComp/Main.js';
 import Login from './loginComp/Login.js';
 import './loginComp/Login.css';
-//import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
-//import StoreLocation from './StoresLocation';
-//import Verification from './verification';
 import logo from './images/logo.svg';
 
 function App() {
