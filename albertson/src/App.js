@@ -9,13 +9,12 @@ import React from 'react';
 
 function App() {
   return (
-    
-      <div>
-        <h1>Hi, welcome back!</h1>
-        <h4>Sign in with your company email</h4>
-        <Login />
-        <i className="fa fa-envelope-open"></i>
-      </div>
+    <div>
+      <Routes>
+        <Route path="/" element={ <Login /> }/>
+        <Route path="/main" element={ <Main /> }/>
+      </Routes>
+    </div>
   );
 }
 
