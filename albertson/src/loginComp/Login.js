@@ -28,9 +28,8 @@ const Login = () => {
         email: user,
         password: pass,
       });
-      await Database.getPredictionFromModel();
+      
       if (currUser !== undefined) {
-        // alert("Success!");
         navigate('/main', {state: {user: currUser}})
         console.log("This is the current User:", currUser);
         valid = true;
@@ -38,7 +37,6 @@ const Login = () => {
         throw new Error("Invalid login credentials");
       }
     } catch (error) {
-      // alert(error.message);
       console.error("ERROR LOGGING-:-:", error);
       incorrectLogin();
     }
