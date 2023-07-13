@@ -22,7 +22,7 @@ const Login = () => {
   }
   async function validateLogin() {
     try {
-      const currUser = await Database.postUserSession({
+      const currUser = await Database.authenticateUser({
         email: user,
         password: pass,
       });

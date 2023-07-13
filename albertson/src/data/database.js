@@ -1,7 +1,7 @@
 import backendOrigin from "../config/origin";
 
 export default class Database {
-  static async postUserSession(loginRequest) {
+  static async authenticateUser(loginRequest) {
     console.log(loginRequest);
     try {
       const response = await fetch(`${backendOrigin}/users/login`, {
