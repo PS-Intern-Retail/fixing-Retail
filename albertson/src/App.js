@@ -5,7 +5,6 @@ import Login from './loginComp/Login.js';
 import './loginComp/Login.css';
 import logo from './images/logo.svg';
 import {Routes, Route} from "react-router-dom";
-import React from 'react';
 
 function App() {
   return (
