@@ -1,12 +1,12 @@
 import React from 'react';
-import { useLocation, useHistory } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button'; // Import Button from Material-UI
 import './verification.css';
 
 
 const Verification = () => {
   const location = useLocation();
-  const history = useHistory();
+  const navigate = useNavigate();
   const searchParams = new URLSearchParams(location.search);
   const selectedState = searchParams.get('state');
   const selectedStoreId = searchParams.get('store');
