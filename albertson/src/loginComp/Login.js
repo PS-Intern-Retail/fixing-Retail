@@ -3,8 +3,11 @@ import { useState } from 'react';
 import { userPassData } from './User_Pass'
 import firstpage from './firstpage.png';
 import logo from '../images/logo.svg';
+import Database from '../data/database';
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
+  const navigate = useNavigate()
   const [user, setUser] = useState('')
   const [pass, setPass] = useState('')
   const [invalid, setInvalid] = useState(false)
@@ -19,18 +22,32 @@ const Login = () => {
       }, 3000)
     }
   }
-
-  function validateLogin(){
-    userPassData.map((data, key) => {
-      if(user.trim() === data.username && pass.trim() === data.password){
-        alert("Success!")
-        valid = true
+  async function validateLogin() {
+    try {
+      const currUser = await Database.postUserSession({
+        email: user,
+        password: pass,
+      });
+  
+      if (currUser !== undefined) {
+        // alert("Success!");
+        navigate('/main', {state: {user: currUser}})
+        console.log("This is the current User:", currUser);
+        valid = true;
+        const users = await Database.getAllUsers();
+        for(let i=0; i<users.length;i++){
+          console.log(users[i]);
+        }
+      } else {
+        throw new Error("Invalid login credentials");
       }
-    })
-
-    incorrectLogin()
+    } catch (error) {
+      // alert(error.message);
+      console.error("ERROR LOGGING-:-:", error);
+      incorrectLogin();
+    }
   }
-
+  
   const handleUserChange = event => {
     setUser(event.target.value)
   }
@@ -43,6 +60,7 @@ const Login = () => {
         <div className="left-side">
         </div>
         <div className="right-side">
+          <h1>Hi, welcome back!</h1>
           <h4>Sign in with your company email</h4>
           <input onChange={handleUserChange} className='email' placeholder='Email'></input>
           <input onChange={handlePassChange} className='pass' placeholder='Password'></input>
