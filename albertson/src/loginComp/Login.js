@@ -26,7 +26,7 @@ const Login = () => {
         email: user,
         password: pass,
       });
-  
+      await Database.getPredictionFromModel();
       if (currUser !== undefined) {
         alert("Success!");
         console.log("This is the current User:", currUser);
