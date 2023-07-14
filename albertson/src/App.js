@@ -4,8 +4,8 @@ import Main from './mainComp/Main.js';
 import Login from './loginComp/Login.js';
 import './loginComp/Login.css';
 import logo from './images/logo.svg';
-import StoresLocation from './StoresLocation'
-import Verification from './verification';
+import StoresLocation from './storeLocationComp/StoresLocation'
+import Verification from './storeLocationComp/verification';
 import {Routes, Route} from "react-router-dom";
 
 function App() {
