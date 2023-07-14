@@ -26,7 +26,6 @@ const Verification = () => {
     <div className="split-container">
       <div className="left-side">
         {/* Content for the left side */}
-        <h2>PAVILION</h2>
       </div>
       <div className="right-side">
         {/* Content for the right side */}
