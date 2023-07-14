@@ -13,7 +13,8 @@ const Verification = () => {
 
   const handleBack = () => {
     // Go back to the previous page
-    history.goBack();
+    navigate('/sl')
+    //history.goBack();
   };
 
   const handleSubmit = () => {

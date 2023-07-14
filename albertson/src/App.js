@@ -5,6 +5,7 @@ import Login from './loginComp/Login.js';
 import './loginComp/Login.css';
 import logo from './images/logo.svg';
 import StoresLocation from './StoresLocation'
+import Verification from './verification';
 import {Routes, Route} from "react-router-dom";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={ <Login /> }/>
         <Route path="/main" element={ <Main /> }/>
         <Route path="/sl" element={ <StoresLocation /> }/>
+        <Route path="/verification" element={ <Verification /> }/>
       </Routes>
     </div>
   );
