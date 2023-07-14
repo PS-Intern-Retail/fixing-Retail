@@ -32,11 +32,13 @@
     margin-bottom: 16px;
   }
   
-  .search-bar {
+.search-bar {
   display: flex;
   align-items: center;
   width: 200%;
   margin-bottom: 24px;
+  position: absolute;
+  top: 15%;
 }
 
 .search-input-container {
