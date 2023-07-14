@@ -1,6 +1,6 @@
 import React from 'react'
 import './Main.css'
-import Uploader from './Uploader.js'
+import Uploader from '../uploadWidget/Uploader.js'
 import { useLocation } from 'react-router-dom'
 
 export default function Main(){

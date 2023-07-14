@@ -5,6 +5,7 @@ import './loginComp/Login.css';
 import logo from './images/logo.svg';
 import {Routes, Route} from "react-router-dom";
 import React from 'react';
+import Gallery from './uploadWidget/Gallery.js';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={ <Login /> }/>
         <Route path="/main" element={ <Main /> }/>
+        <Route path="/gallery" element={ <Gallery /> }/>
       </Routes>
     </div>
   );
