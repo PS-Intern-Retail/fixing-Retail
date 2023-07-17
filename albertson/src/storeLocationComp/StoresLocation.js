@@ -101,7 +101,6 @@ const StoreLocation = () => {
   return (
     <div className="split-container">
       <div className="left-side">
-        <h2>PAVILION</h2>
       </div>
       <div className="right-side">
         <div className="search-bar">
@@ -129,7 +128,7 @@ const StoreLocation = () => {
           />
         </div>
         <div className="store-list">
-          <h3>Store List:</h3>
+          <h3>Location Selection</h3>
           <ul>
             {storeList.map((store, index) => (
               <li key={index}>
