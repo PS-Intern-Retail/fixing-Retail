@@ -23,7 +23,7 @@ export default function Main(){
             </div>
             <div className="Upload">
                 <Uploader></Uploader>
-                <button className='viewUploadsBtn'>View All Uploads</button>
+                {/* <button className='viewUploadsBtn'>View All Uploads</button> */}
             </div>
             <div className='viewPlaylist'>  
                 <button className="viewPlaylistBtn">View All Playlists</button>
