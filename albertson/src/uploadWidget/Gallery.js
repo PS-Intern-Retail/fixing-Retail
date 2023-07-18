@@ -13,13 +13,16 @@ const Gallery = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Gallery</h2>
-      <div className="image-list">
+    <div className="gallery-container">
+      <h4>All Uploads</h4>
+      <div className="image-grid">
         {images.map((image, index) => (
           <div className="image-item" key={index}>
-            <img src={image.url} alt={image.name} width={200} height={200} />
-            <span>{image.name}</span>
+            {image.url ? (
+              <img src={image.url} alt={image.name} />
+            ) : (
+              <div className="image-placeholder">Image Not Available</div>
+            )}
           </div>
         ))}
       </div>

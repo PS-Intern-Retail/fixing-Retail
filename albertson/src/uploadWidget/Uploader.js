@@ -61,12 +61,8 @@ export default function Uploader() {
   return (
     <main>
     {successMessage ? (
-      <div className="upload-widget success">
-        <div className="success-container">
-          <RiCheckLine color="green" size={40} />
-          <div className="success-message">{successMessage}</div>
-        </div>
-      </div>
+      <div className="success-message">
+          <RiCheckLine color="green" size={40} />{successMessage}</div>
     ) : (
         <div className={`upload-widget ${loading ? 'loading' : ''}`}>
           {(images.length === 0 || images.length > 0) && !loading && (
