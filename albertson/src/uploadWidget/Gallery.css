@@ -1,0 +1,27 @@
+.gallery-container {
+  position: absolute;
+}
+
+h4 {
+  color: grey; 
+  position: absolute;
+  top: 80px;
+  left: 7%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  padding: 8px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+  margin-top: 100px;
+  padding: 50px;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}

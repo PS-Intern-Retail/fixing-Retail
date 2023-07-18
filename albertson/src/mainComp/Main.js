@@ -1,6 +1,6 @@
 import React from 'react'
 import './Main.css'
-import Uploader from './Uploader.js'
+import Uploader from '../uploadWidget/Uploader.js'
 import { useLocation } from 'react-router-dom'
 import Icon from './Icon.js';
 
@@ -23,6 +23,7 @@ export default function Main(){
 
             </div>
             <div className="Upload">
+
                 <Uploader></Uploader> 
                 <button className='viewUploadsBtn'>View All Uploads</button>
             </div>
