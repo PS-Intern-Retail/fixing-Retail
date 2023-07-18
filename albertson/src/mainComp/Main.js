@@ -6,13 +6,12 @@ import Icon from './Icon.js';
 
 
 export default function Main(){
-    //const { state } = useLocation()
+    const { state } = useLocation()
     // console.log(state)
     // console.log(state.user)
     return(
         <div>
             <Icon />
-            <h2>Welcome!</h2>
             
             <div className='AI_GenBox'>
                 <p className="firstText">Start with a <b><i>detailed description</i></b></p>
