@@ -2,6 +2,8 @@ import React from 'react'
 import './Main.css'
 import Uploader from './Uploader.js'
 import { useLocation } from 'react-router-dom'
+import Icon from './Icon.js';
+
 
 export default function Main(){
     //const { state } = useLocation()
@@ -9,7 +11,7 @@ export default function Main(){
     // console.log(state.user)
     return(
         <div>
-            <img className="icon" src="https://th.bing.com/th/id/R.ea0d38e91f172b985c948f989e98c39f?rik=NR0pbQNo1c8XMw&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_357118.png&ehk=cUAdriibLw7xEDkfIXfwIR3GAAijwWJWZIpc7ctVbmo%3d&risl=&pid=ImgRaw&r=0"/>
+            <Icon />
             <h2>Welcome!</h2>
             
             <div className='AI_GenBox'>
