@@ -1,21 +1,27 @@
 .header{
     font-size: 35px;
     position:absolute;
-    top: 8%;
+    top: 15%;
     left: 34%;
 }
 
+.welcome{
+  position: absolute;
+  top: 0%;
+  left: 34%;
+  color: #20509C;
+}
 .subHeader{
   font-size: 20px;
   color: grey;
   position: absolute;
-  top: 20%;
+  top: 25%;
   left: 34%;
 }
 
 .storeList{
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 33%;
   list-style: none;
   text-align: left;
