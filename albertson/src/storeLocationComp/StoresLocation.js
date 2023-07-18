@@ -54,7 +54,8 @@ const StoreLocation = () => {
 
   const handleNext = () => {
     if (selectedState) {
-      navigate(`/verification?state=${selectedState.label}`,
+      navigate(`/verification?state=${selectedState.label}`
+      ,
       {state: {stores: storeList, 
                checkedStores: checkedState, 
                storeName: storeN}}
