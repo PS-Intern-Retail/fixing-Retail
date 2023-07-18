@@ -7,7 +7,7 @@ import Icon from './Icon.js';
 
 export default function Main(){
     const { state } = useLocation()
-    // console.log(state)
+    //console.log(state.user.stores)
     // console.log(state.user)
     return(
         <div>
@@ -23,7 +23,7 @@ export default function Main(){
 
             </div>
             <div className="Upload">
-                <Uploader></Uploader>
+                <Uploader></Uploader> 
                 <button className='viewUploadsBtn'>View All Uploads</button>
             </div>
             <div className='viewPlaylist'>  

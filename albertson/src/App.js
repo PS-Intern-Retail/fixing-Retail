@@ -6,6 +6,7 @@ import './loginComp/Login.css';
 import logo from './images/logo.svg';
 import StoresLocation from './storeLocationComp/StoresLocation'
 import Verification from './storeLocationComp/verification';
+import Banner from './bannerSelectionComp/Banner'
 import {Routes, Route} from "react-router-dom";
 import ViewPlaylist from './ViewPlaylist';
 
@@ -21,8 +22,8 @@ function App() {
 
         <Route path="/main" element={ <Main /> }/>
 
-        {/* <Route path="/banner" element={ <Banner /> }/> */}
-
+        <Route path="/banner" element={ <Banner /> }/>
+          
         <Route path="/sl" element={ <StoresLocation /> }/>
 
         <Route path="/verification" element={ <Verification /> }/>

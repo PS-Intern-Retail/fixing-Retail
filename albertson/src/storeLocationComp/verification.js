@@ -6,6 +6,7 @@ import './verification.css';
 
 const Verification = () => {
   const location = useLocation();
+  const { state } = useLocation();
   const navigate = useNavigate();
   const searchParams = new URLSearchParams(location.search);
   const selectedState = searchParams.get('state');
@@ -19,7 +20,7 @@ const Verification = () => {
 
   const handleSubmit = () => {
     // Add your submit logic here
-    console.log('Submit form');
+    navigate('/main')
   };
 
   return (
@@ -34,10 +35,16 @@ const Verification = () => {
           <h2> {selectedState}</h2>
           <p className='verify'>  Make sure your locations are correct before submitting.</p>
           <p>Selected Store ID: {selectedStoreId}</p>
-          {/* Add your verification form or content here */}
+          <div>
+            <p>Store Name: {state.storeName}</p>
+            <p>Store List:</p>
+          </div>
+          
           <div className="button-container">
-            <Button variant="contained"  color="primary" className="back" onClick={handleBack}>Back</Button>
-            <Button  variant="contained"  color="primary" className="next" onClick={handleSubmit}>Submit</Button>
+            <button className="back-button" onClick={handleBack}>Back</button>
+            <button className="next-button" onClick={handleSubmit}>Submit</button>
+            {/* <Button variant="contained"  color="primary" className="back" onClick={handleBack}>Back</Button>
+            <Button  variant="contained"  color="primary" className="next" onClick={handleSubmit}>Submit</Button> */}
           </div>
         </div>
       </div>
