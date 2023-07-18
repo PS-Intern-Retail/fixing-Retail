@@ -1,0 +1,55 @@
+import React from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import Button from '@mui/material/Button'; // Import Button from Material-UI
+import './verification.css';
+
+
+const Verification = () => {
+  const location = useLocation();
+  const { state } = useLocation();
+  const navigate = useNavigate();
+  const searchParams = new URLSearchParams(location.search);
+  const selectedState = searchParams.get('state');
+  const selectedStoreId = searchParams.get('store');
+
+  const handleBack = () => {
+    // Go back to the previous page
+    navigate('/sl')
+    //history.goBack();
+  };
+
+  const handleSubmit = () => {
+    // Add your submit logic here
+    navigate('/main')
+  };
+
+  return (
+    <div className="split-container">
+      <div className="left-side">
+        {/* Content for the left side */}
+      </div>
+      <div className="right-side">
+        {/* Content for the right side */}
+        <div>
+          <h2>Verification Page</h2>
+          <h2> {selectedState}</h2>
+          <p className='verify'>  Make sure your locations are correct before submitting.</p>
+          <p>Selected Store ID: {selectedStoreId}</p>
+          <div>
+            <p>Store Name: {state.storeName}</p>
+            <p>Store List:</p>
+          </div>
+          
+          <div className="button-container">
+            <button className="back-button" onClick={handleBack}>Back</button>
+            <button className="next-button" onClick={handleSubmit}>Submit</button>
+            {/* <Button variant="contained"  color="primary" className="back" onClick={handleBack}>Back</Button>
+            <Button  variant="contained"  color="primary" className="next" onClick={handleSubmit}>Submit</Button> */}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Verification;

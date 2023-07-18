@@ -1,0 +1,43 @@
+.divider {
+    border-top: 1px solid black;
+    margin: 8px 0;
+}
+
+.dropdown {
+    position: absolute;
+    top: 70px;
+    left: 85%;
+    background-color: white;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    z-index: 9999;    
+  }
+  
+.icon{
+    height: 8%;
+    width: 4%;
+    position: absolute;
+    top: 2.5%;
+    left: 94%;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.option-text {
+    font-size: 12px;
+}
+
+.option:hover{
+    color:gray;
+}
+
+.small-icon {
+    width: 18px; 
+    height: 18px; 
+    margin-right: 8px; 
+}
