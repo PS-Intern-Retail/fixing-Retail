@@ -1,14 +1,23 @@
 import React from 'react'
 import './Main.css'
 import Uploader from '../uploadWidget/Uploader.js'
-import { useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import Icon from './Icon.js';
+import { Link, useLocation } from 'react-router-dom';
+
 
 
 export default function Main(){
     const { state } = useLocation()
     //console.log(state.user.stores)
     // console.log(state.user)
+
+    // const navigateToPlaylist = () => {
+    //     const navigateToPlaylist = () => {
+    //         history.push("/playlist");
+    //       };
+
+
     return(
         <div>
             <Icon />
@@ -25,11 +34,24 @@ export default function Main(){
             <div className="Upload">
 
                 <Uploader></Uploader> 
-                <button className='viewUploadsBtn'>View All Uploads</button>
+                {/* <button className='viewUploadsBtn'>View All Uploads</button> */}
             </div>
-            <div className='viewPlaylist'>  
+
+
+            {/* <div className='viewPlaylist'>  
                 <button className="viewPlaylistBtn">View All Playlists</button>
             </div>
+
+            <div className='viewPlaylist'>
+                <button className="viewPlaylistBtn"
+                onClick={navigateToPlaylist}
+                >View All Playlists
+                </button>
+            </div> */}
+
+        <div className='viewPlaylist'>
+        <Link to="/playlist" className="viewPlaylistBtn">View All Playlists</Link>
         </div>
+    </div>
     )
-}
+    }

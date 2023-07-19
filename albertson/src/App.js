@@ -11,8 +11,8 @@ import Schedule from './Schedule.js';
 import StoresLocation from './storeLocationComp/StoresLocation'
 import Verification from './storeLocationComp/verification';
 import Banner from './bannerSelectionComp/Banner'
-import {Routes, Route} from "react-router-dom";
-import ViewPlaylist from './ViewPlaylist';
+// import {Routes, Route} from "react-router-dom";
+// import ViewPlaylist from './ViewPlaylist';
 
 function App() {
 
