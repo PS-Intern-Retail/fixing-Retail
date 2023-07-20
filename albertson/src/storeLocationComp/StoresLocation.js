@@ -19,17 +19,14 @@ const StoreLocation = () => {
   }
 
   const [storeList, setStoreList] = useState([]);
-  const [checkedState, setCheckedState] = useState(
-    new Array(2).fill(false)
-  )
-
   const navigate = useNavigate();
 
-  const handleOnChange = (position) => {
-    const updatedCheckedState = checkedState.map((item, index) =>
-      index === position ? !item : item
-    )
-    setCheckedState(updatedCheckedState)
+  const handleOnChange = (storeId) => {
+    setCheckedState(prevState => ({
+      ...prevState, 
+      [storeId]: !prevState[storeId]
+    }))
+
   }
 
   const handleStateSelection = (event, newValue) => {
@@ -40,28 +37,53 @@ const StoreLocation = () => {
   };
 
   const fetchStores = (selectedStateValue) => {
-    const stores = [
-      { name: 'Store 1', city: 'City A', state: selectedStateValue },
-      { name: 'Store 2', city: 'City B', state: selectedStateValue },
-      // Rest of the stores...
-    ];
+    const stores = []
+    for (let i = 0; i < state.storeList.length; i++){
+      if(state.storeList[i].storeName === state.storeName && state.storeList[i].location.state === selectedStateValue){
+        stores.push(state.storeList[i])
+      }
+    }
     setStoreList(stores);
   };
 
+  const initializeCheckedState = (storeList) => {
+    const initialState = {};
+    for (const store of storeList) {
+      initialState[store.id] = false;
+    }
+    return initialState;
+  };
+
+  const getStores = () =>{
+    var chosenStores = []
+    for(let i = 0; i < state.storeList.length; i++){
+      if(checkedState[state.storeList[i].id]){
+        chosenStores.push(state.storeList[i])
+      }
+    }
+    return chosenStores
+  }
+
+  const [checkedState, setCheckedState] = useState(() =>
+    initializeCheckedState(state.storeList)
+  );
+
   const handleBack = () => {
-    navigate('/banner')
+    navigate('/banner', {state: {user: state.user}})
   };
 
   const handleNext = () => {
-    if (selectedState) {
-      navigate(`/verification?state=${selectedState.label}`
+    const chosenLoc = getStores()
+    if (chosenLoc.length !== 0) {
+      navigate(`/verification`
       ,
-      {state: {stores: storeList, 
-               checkedStores: checkedState, 
-               storeName: storeN}}
+      {state: {storeList: state.storeList, 
+               chosenLoc: chosenLoc, 
+               storeName: storeN,
+               user: state.user}}
       );
     } else {
-      console.log('Please select a state');
+      alert("Please choose a location!")
     }
   };
 
@@ -80,7 +102,6 @@ const StoreLocation = () => {
                   <SearchIcon className="search-icon" />
                   <TextField
                     {...params}
-                    // label="Search location"
                     variant="outlined"
                     className="search-input"
                     sx={{
@@ -106,7 +127,8 @@ const StoreLocation = () => {
           <h3 className="locSelect">Location Selection</h3>
           <p className="subheader">Search for banner locations. You may select multiple locations.</p>
           <ul className="s-list">
-            {storeList.map((store, index) => (
+            {(storeList.length === 0) ? <h4 className="invalidMess">You have no stores available to you in this state</h4>:
+            storeList.map((store, index) => (
               <li key={index} className="listEle">
                 <label>
                   <input 
@@ -115,10 +137,10 @@ const StoreLocation = () => {
                     id={`custom-checkbox-${index}`}
                     name={store}
                     value={store}
-                    checked={checkedState[index]}
-                    onChange={() => handleOnChange(index)}
+                    checked={checkedState[store.id]}
+                    onChange={() => handleOnChange(store.id)}
                   />  
-                  <span class="checktext"> {store.name}</span>
+                  <span class="checktext"> {store.location.address}, {store.location.city}, {store.location.state} {store.location.zip}   (SID: {store.id})</span>
                 </label>
               </li>
             ))}

@@ -28,7 +28,7 @@ const Login = () => {
         email: user,
         password: pass,
       });
-  
+
       if (currUser !== undefined) {
         // alert("Success!");
         navigate('/banner', {state: {user: currUser}})
