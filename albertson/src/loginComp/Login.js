@@ -31,7 +31,7 @@ const Login = () => {
   
       if (currUser !== undefined) {
         // alert("Success!");
-        navigate('/main', {state: {user: currUser}})
+        navigate('/banner', {state: {user: currUser}})
         console.log("This is the current User:", currUser);
         valid = true;
         const users = await Database.getAllUsers();
