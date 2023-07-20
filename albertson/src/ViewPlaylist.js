@@ -3,7 +3,8 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import './ViewPlaylist.css'; // Import the CSS file for component-specific styles
+import Button from '@mui/material/Button'; // Add this line
+import './ViewPlaylist.css'; 
 
 export default function ViewPlaylist() {
   const [showImage1, setShowImage1] = React.useState(true);
@@ -86,6 +87,8 @@ export default function ViewPlaylist() {
 
   return (
     <div className="card-container">
+
+    
       <div className="top-cards">
         {topCampaigns.map((campaign, index) => (
           <Card key={index} className="card" sx={{ height: '100%', maxWidth: 345 }}>
@@ -168,6 +171,15 @@ export default function ViewPlaylist() {
           </Card>
         ))}
       </div>
+      <Button
+        className="create-playlist-button"
+        variant="contained"
+        onClick={() => {
+          // Handle create playlist button click
+        }}
+      >
+        Create New Playlist
+      </Button>
     </div>
   );
 }

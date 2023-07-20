@@ -1,7 +1,7 @@
 .schedule-container {
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .section {
@@ -9,37 +9,71 @@
   }
   
   .section-heading {
-    font-size: 18px;
+    font-size: 20px; /* Updated font size */
     font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .input-container {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
   
   .input-container label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }
   
-  .input-container input[type="text"] {
-    width: 100%;
-    padding: 8px;
+  .input-container input {
+    width: 220px; /* Increased width */
+    padding: 10px; /* Increased padding */
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 16px; /* Increased font size */
   }
   
   .schedule-button {
-    background-color: blue;
+    background-color: #20509c;
     color: white;
     padding: 10px 20px;
     font-size: 16px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    display: block;
-    margin: 0 auto;
+    border: 1px solid #20509C;
   }
   
+  /* Modal styles */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .modal-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .modal h3 {
+    margin-top: 0;
+  }
+  
+  .modal-close {
+    background-color: #20509C;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
   
