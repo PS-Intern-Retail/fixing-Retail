@@ -106,12 +106,8 @@ const Schedule = () => {
           )}
         </div>
       )}
-      <div className='confirmalocation'>   <h1>  Confirm location   </h1>  
-      <p> 591 Tres Pinos Rd, Holister, Ca </p>
-        </div>
-        <div className='confirmalocation'>   <h1> Confirm Playlist   </h1>  
-      <p> Independence Day Ad  </p>
-        </div>
+      
+      
     </div>
   );
 };
