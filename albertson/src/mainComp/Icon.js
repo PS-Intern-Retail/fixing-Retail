@@ -12,7 +12,7 @@ export default function Icon(){
     }
 
     const handleChangeButtonClick = () => {
-        navigate('/sl');
+        navigate('/banner');
     }
 
     const handleViewButtonClick = () => {

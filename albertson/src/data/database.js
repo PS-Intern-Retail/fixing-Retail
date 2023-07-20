@@ -34,7 +34,7 @@ export default class Database {
     static async getStoreById(storeId) {
         const response = await fetch(`${backendOrigin}/stores/${storeId}`);
         const storeData = await response.json();
-        console.log(storeData);
+        // console.log(storeData);
 
         return storeData;
     }
@@ -43,6 +43,7 @@ export default class Database {
         let storeList = [];
         for (let i = 0; i < storeIds.length; i++) {
             storeList.push(Database.getStoreById(storeIds[i]));
+            // console.log(Database.getStoreById(storeIds[i]));
         }
         return storeList;
     }
