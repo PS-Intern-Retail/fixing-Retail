@@ -11,6 +11,7 @@ import Schedule from './Schedule.js';
 import StoresLocation from './storeLocationComp/StoresLocation'
 import Verification from './storeLocationComp/verification';
 import Banner from './bannerSelectionComp/Banner'
+import Gallery from './uploadWidget/Gallery'
 // import {Routes, Route} from "react-router-dom";
 // import ViewPlaylist from './ViewPlaylist';
 
@@ -35,6 +36,9 @@ function App() {
         <Route path="/schedule" element={<Schedule />} /> 
 
         <Route path="/banner" element={ <Banner /> }/>
+
+        <Route path="/gallery" element={ <Gallery /> }/>
+
           
 
       </Routes>

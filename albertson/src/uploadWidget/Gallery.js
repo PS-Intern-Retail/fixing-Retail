@@ -7,6 +7,7 @@ const Gallery = () => {
   useEffect(() => {
     // Retrieve the uploaded images from local storage or through state management
     const uploadedImages = JSON.parse(localStorage.getItem('uploadedImages'));
+    console.log('Retrieved images:', uploadedImages);
     if (uploadedImages) {
       setImages(uploadedImages);
     }

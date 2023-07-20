@@ -1,3 +1,4 @@
+/* styling inside of upload widget  */
 .upload-widget {
   display: flex;
   flex-direction: column;
@@ -68,6 +69,7 @@
   scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
 }  */
 
+/* view all uploads button */
 .view-gallery-button {
   padding: 10px;
   background-color: white;
@@ -87,7 +89,7 @@
 }
 
 .view-gallery-button:hover {
-  background-color: #E1BBB0;
+  background-color: #f1e4e1;
 }
 
 .success-message {
