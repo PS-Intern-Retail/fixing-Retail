@@ -6,7 +6,7 @@ const Playlister = () => {
   const navigate = useNavigate();
 
   const navigateToPlaylist = () => {
-    navigate('/playlist');
+    navigate('/viewplaylist');
   };
 
 
