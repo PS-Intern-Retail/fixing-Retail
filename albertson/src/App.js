@@ -16,37 +16,20 @@ import Gallery from './uploadWidget/Gallery'
 // import ViewPlaylist from './ViewPlaylist';
 
 function App() {
-
   return (
-
     <div>
-
       <Routes>
-
         <Route path="/" element={<Login />} />
-
         <Route path="/main" element={<Main />} />
-
         <Route path="/sl" element={<StoresLocation />} />
-
         <Route path="/verification" element={<Verification />} /> 
-
         <Route path="/viewplaylist" element={<ViewPlaylist />} />
-
         <Route path="/schedule" element={<Schedule />} /> 
-
         <Route path="/banner" element={ <Banner /> }/>
-
         <Route path="/gallery" element={ <Gallery /> }/>
-
-          
-
       </Routes>
-
     </div>
-
   );
-
 }
 
 export default App;
