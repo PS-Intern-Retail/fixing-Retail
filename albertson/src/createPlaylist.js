@@ -1,13 +1,13 @@
-import React, { useState, useRef, useEffect } from 'react';
-import html2pdf from 'html2pdf.js';
-import './createPlaylist.css';
-import Gallery from './uploadWidget/Gallery';
-import TextFieldsIcon from '@mui/icons-material/TextFields'; // Add this import
-import PublishIcon from '@mui/icons-material/Publish'; // Add this import
+import React, { useState, useRef, useEffect } from "react";
+import html2pdf from "html2pdf.js";
+import "./createPlaylist.css";
+import Gallery from "./uploadWidget/Gallery";
+import TextFieldsIcon from "@mui/icons-material/TextFields"; // Add this import
 
 function CreatePlaylist() {
   const [imageSrc, setImageSrc] = useState(null);
   const [selectedImages, setSelectedImages] = useState([]);
+  const [text, setText] = useState("");
   const fileInputRef = useRef(null);
 
   const handleImageUpload = (event) => {
@@ -23,36 +23,62 @@ function CreatePlaylist() {
     }
   };
 
-  const handlePublishIconClick = () => {
-    fileInputRef.current.click();
-  };
-
-  const handleExport = () => {
+  const handleExport = async () => {
     if (imageSrc || selectedImages.length > 0) {
-      const content = document.createElement('div');
+      const content = document.createElement("div");
 
       // Add the uploaded image if available
       if (imageSrc) {
-        const imageElement = document.createElement('img');
+        const imageElement = document.createElement("img");
         imageElement.src = imageSrc;
-        imageElement.style.width = '100%';
+        imageElement.style.width = "100%";
         content.appendChild(imageElement);
       }
 
       // Add selected images from the gallery
-      const galleryImages = document.querySelectorAll('.image-item.selected img');
-      galleryImages.forEach((img) => {
-        const galleryImageElement = document.createElement('img');
-        galleryImageElement.src = img.src;
-        galleryImageElement.style.width = '100%';
-        content.appendChild(galleryImageElement);
+      const galleryImages = document.querySelectorAll(
+        ".image-item.selected img"
+      );
+      const galleryImageElements = await Promise.all(
+        Array.from(galleryImages).map((img) => {
+          return new Promise((resolve, reject) => {
+            const imageElement = document.createElement("img");
+            imageElement.src = img.src;
+            imageElement.style.width = "100%";
+            imageElement.onload = () => resolve(imageElement);
+            imageElement.onerror = () => reject();
+          });
+        })
+      );
+
+      galleryImageElements.forEach((img) => {
+        content.appendChild(img);
+
+        // Add the text overlay to the images
+        const textOverlay = document.createElement("div");
+        textOverlay.innerText = text;
+        textOverlay.style.position = "absolute";
+        textOverlay.style.top = "50%";
+        textOverlay.style.left = "50%";
+        textOverlay.style.transform = "translate(-50%, -50%)";
+        textOverlay.style.fontSize = "20px";
+        textOverlay.style.fontWeight = "bold";
+        textOverlay.style.color = "white";
+        textOverlay.style.textShadow = "1px 1px 2px rgba(0, 0, 0, 0.8)";
+        img.parentElement.appendChild(textOverlay);
       });
 
-      html2pdf().from(content).save('exported_image.pdf');
+      html2pdf().from(content).save("exported_image.pdf");
     } else {
-      alert('Please upload an image or select images from the gallery.');
+      alert("Please upload an image or select images from the gallery.");
     }
   };
+
+  useEffect(() => {
+    if (selectedImages.length > 0) {
+      handleExport();
+    }
+  }, [text]);
 
   const handleImageSelect = (imageUrl) => {
     if (selectedImages.includes(imageUrl)) {
@@ -64,41 +90,37 @@ function CreatePlaylist() {
 
   return (
     <div>
-      <div className='title'>
-        <img
-          src="https://th.bing.com/th/id/R.86aff27675b3c44f1ba9bcef9e9ab268?rik=AjaxIZSY%2f%2b0pHQ&riu=http%3a%2f%2fthehealthgardener.com%2fwp-content%2fuploads%2f2018%2f11%2fcolour-wheel.png&ehk=d1uaGkz9InPVRYv%2b%2fZWTJTVTk%2fE%2bOtOIPj6NhxBJCww%3d&risl=&pid=ImgRaw&r=0"
-          alt="Color Wheel"
-          style={{ width: '30px', height: '30px', marginRight: '10px' }}
-        />
+      <div className="title">
+        
         PAVILIONS
       </div>
 
-      <div className='create-section'>
+      <div className="create-section">
+      <img
+          src="https://th.bing.com/th/id/R.86aff27675b3c44f1ba9bcef9e9ab268?rik=AjaxIZSY%2f%2b0pHQ&riu=http%3a%2f%2fthehealthgardener.com%2fwp-content%2fuploads%2f2018%2f11%2fcolour-wheel.png&ehk=d1uaGkz9InPVRYv%2b%2fZWTJTVTk%2fE%2bOtOIPj6NhxBJCww%3d&risl=&pid=ImgRaw&r=0"
+          alt="Color Wheel"
+          style={{ width: "30px", height: "30px", marginRight: "10px" }}
+        />
         Independence day
-        <button className='Schedulebtn'>Schedule</button>
-        <button className='Exportbtn' onClick={handleExport}>
+        <TextFieldsIcon
+          onClick={() => {
+            const textInput = window.prompt("Enter your text:");
+            setText(textInput);
+          }}
+        />
+        <button className="Schedulebtn">Schedule</button>
+        <button className="Exportbtn" onClick={handleExport}>
           Export
         </button>
       </div>
 
       <div className="text-icon">
-        <div className='container'>
-          <Gallery selectedImages={selectedImages} onImageSelect={handleImageSelect} />
+        <div className="container">
+          <Gallery
+            selectedImages={selectedImages}
+            onImageSelect={handleImageSelect}
+          />
         </div>
-        <ul className="icon-list">
-          <li className="icon-container">
-            <TextFieldsIcon />
-          </li>
-          <li className="icon-container">
-            <PublishIcon onClick={handlePublishIconClick} />
-            <input
-              type="file"
-              onChange={handleImageUpload}
-              ref={fileInputRef}
-              style={{ display: 'none' }}
-            />
-          </li>
-        </ul>
       </div>
     </div>
   );
