@@ -11,26 +11,22 @@ import { Link, useLocation } from 'react-router-dom';
 
 export default function Main(){
     const { state } = useLocation()
-    // const storeName = state.storeName
-    //console.log(state.user.stores)
-    // console.log(state.user)
-
-    // const navigateToPlaylist = () => {
-    //     const navigateToPlaylist = () => {
-    //         history.push("/playlist");
-    //       };
 
     let storeName=""
     let user = "Rashmi" 
+    let storeList = []
     if (state){
         storeName= state.storeName
         user = state.user
+        storeList = state.storeList
     }
+
+    console.log(storeList)
     return(
         <div>
             <Icon storeName={storeName} user={user}/>
             <div className='AI_GenBox'>
-                <AiComp></AiComp>
+                <AiComp storeList={storeList}></AiComp>
             </div>
             <div className="Upload">
                 <Uploader></Uploader> 
