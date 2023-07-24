@@ -3,10 +3,10 @@ import './App.css';
 import Main from './mainComp/Main.js';
 import Login from './loginComp/Login.js';
 import './loginComp/Login.css';
-import logo from './images/logo.svg';
+import Popup from './Popup';
 
 import { Routes, Route } from "react-router-dom";
-import ViewPlaylist from './ViewPlaylist.js';
+import ViewPlaylist from './viewPlaylistComp/ViewPlaylist.js';
 import Schedule from './Schedule.js';
 import StoresLocation from './storeLocationComp/StoresLocation'
 import Verification from './storeLocationComp/verification';

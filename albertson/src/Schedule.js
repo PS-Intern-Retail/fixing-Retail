@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import './Schedule.css';
+import './mainComp/Main.css'
+import 'reactjs-popup/dist/index.css';
 
-const Schedule = () => {
+const Schedule = ( {onClose} ) => {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const [startTime, setStartTime] = useState('');
@@ -11,10 +12,17 @@ const Schedule = () => {
     // Perform scheduling logic here
     console.log('Scheduled!');
   };
+  
+  const handlePopupClose = () => {
+    onClose();
+  }
 
   return (
-    <div className="schedule-container">
+    <div className="popup">
       <div className="section">
+      <button className="close-button" onClick={handlePopupClose}>
+        x
+      </button>
         <div className="section-heading">Starting Date & Time</div>
         <div className="input-container">
           <label htmlFor="start-date">Enter Start Date (MM DD YYYY):</label>
