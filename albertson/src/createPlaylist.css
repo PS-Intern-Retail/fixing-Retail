@@ -1,0 +1,77 @@
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    background: #F5F5F5;
+    height: 50px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .text-icon {
+    width: auto;
+    height: 500px;
+    flex-shrink: 0;
+    background: #D9D9D9;
+  }
+  
+  .create-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    background: black;
+    height: 50px;
+    font-weight: bold;
+    width: 450px;
+    color: white;
+    margin-left: auto;
+  }
+  
+  .Schedulebtn {
+    color: #20509C;
+    font-family: Inter;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 15px;
+  }
+  
+  .Exportbtn {
+    color: white;
+    font-family: Inter;
+    background-color: #20509C;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+
+  .icon-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .icon-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  
+  .container {
+    background-color: #F5F5F5;
+    margin-left: 900px; 
+    padding: 4px 8px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    width: 900px;
+    height: 490px;
+    margin-bottom: -400px;
+  }
+  
