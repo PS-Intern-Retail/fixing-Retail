@@ -1,15 +1,31 @@
+
+
 import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import './Schedule.css';
 
 const Schedule = () => {
-  const [startDate, setStartDate] = useState('');
-  const [endDate, setEndDate] = useState('');
-  const [startTime, setStartTime] = useState('');
-  const [endTime, setEndTime] = useState('');
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
+  const [startTime, setStartTime] = useState(null);
+  const [endTime, setEndTime] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+  const [uploadSuccess, setUploadSuccess] = useState(false);
 
   const handleSchedule = () => {
     // Perform scheduling logic here
-    console.log('Scheduled!');
+    // Simulating upload success for demonstration
+    setUploadSuccess(true);
+    setShowModal(true);
+
+    // Simulating upload failure for demonstration
+    // setUploadSuccess(false);
+    // setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
   };
 
   return (
@@ -17,48 +33,83 @@ const Schedule = () => {
       <div className="section">
         <div className="section-heading">Starting Date & Time</div>
         <div className="input-container">
-          <label htmlFor="start-date">Enter Start Date (MM DD YYYY):</label>
-          <input
-            type="text"
+          <label htmlFor="start-date">Enter Start Date:</label>
+          <DatePicker
+            selected={startDate}
+            onChange={(date) => setStartDate(date)}
+            dateFormat="yyyy-MM-dd"
             id="start-date"
-            value={startDate}
-            onChange={(e) => setStartDate(e.target.value)}
           />
         </div>
         <div className="input-container">
-          <label htmlFor="start-time">Enter Start Time (HH:MM AM/PM):</label>
-          <input
-            type="text"
+          <label htmlFor="start-time">Enter Start Time:</label>
+          <DatePicker
+            selected={startTime}
+            onChange={(time) => setStartTime(time)}
+            showTimeSelect
+            showTimeSelectOnly
+            timeIntervals={15}
+            timeCaption="Time"
+            dateFormat="HH:mm"
             id="start-time"
-            value={startTime}
-            onChange={(e) => setStartTime(e.target.value)}
           />
         </div>
       </div>
       <div className="section">
         <div className="section-heading">Ending Date & Time</div>
         <div className="input-container">
-          <label htmlFor="end-date">Enter End Date (MM DD YYYY):</label>
-          <input
-            type="text"
+          <label htmlFor="end-date">Enter End Date:</label>
+          <DatePicker
+            selected={endDate}
+            onChange={(date) => setEndDate(date)}
+            dateFormat="yyyy-MM-dd"
             id="end-date"
-            value={endDate}
-            onChange={(e) => setEndDate(e.target.value)}
           />
         </div>
         <div className="input-container">
-          <label htmlFor="end-time">Enter End Time (HH:MM AM/PM):</label>
-          <input
-            type="text"
+          <label htmlFor="end-time">Enter End Time:</label>
+          <DatePicker
+            selected={endTime}
+            onChange={(time) => setEndTime(time)}
+            showTimeSelect
+            showTimeSelectOnly
+            timeIntervals={15}
+            timeCaption="Time"
+            dateFormat="HH:mm"
             id="end-time"
-            value={endTime}
-            onChange={(e) => setEndTime(e.target.value)}
           />
         </div>
       </div>
       <button className="schedule-button" onClick={handleSchedule}>
         Schedule Upload
       </button>
+      {showModal && (
+        <div className={`modal ${uploadSuccess ? 'success' : 'failure'}`}>
+          {uploadSuccess ? (
+            <>
+              <div className="modal-content">
+                <span className="modal-icon">&#x2714;</span>
+                <h3>Schedule Successful</h3>
+              </div>
+              <button className="modal-close" onClick={closeModal}>
+                Close
+              </button>
+            </>
+          ) : (
+            <>
+              <div className="modal-content">
+                <span className="modal-icon">&#x2716;</span>
+                <h3>Schedule Failed</h3>
+              </div>
+              <button className="modal-close" onClick={closeModal}>
+                Close
+              </button>
+            </>
+          )}
+        </div>
+      )}
+      
+      
     </div>
   );
 };
