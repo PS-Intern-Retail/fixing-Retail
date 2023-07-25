@@ -19,7 +19,7 @@ const Verification = () => {
                               user: state.user
     }})
   };
-
+  //Hello
   const handleSubmit = () => {
     // Add your submit logic here
     navigate('/main', {state: { storeList: state.chosenLoc, 
