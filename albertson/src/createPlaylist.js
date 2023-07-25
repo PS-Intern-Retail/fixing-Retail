@@ -127,7 +127,7 @@ function CreatePlaylist() {
                 top: `${position.y}px`,
                 left: `${position.x}px`,
                 transform: "translate(-50%, -50%)",
-                fontSize: "30px",
+                fontSize: "20px",
                 fontWeight: "bold",
                 color: text.color || "white",
                 textShadow: "1px 1px 2px rgba(0, 0, 0, 0.8)",
