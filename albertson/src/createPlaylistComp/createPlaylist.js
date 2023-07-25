@@ -1,16 +1,28 @@
 import React, { useState, useRef, useEffect } from "react";
 import html2pdf from "html2pdf.js";
 import "./createPlaylist.css";
-import Gallery from "./uploadWidget/Gallery";
+import Gallery from "../uploadWidget/Gallery";
 import TextFieldsIcon from "@mui/icons-material/TextFields"; // Add this import
-import Icon from './mainComp/Icon.js';
-import './mainComp/Icon.css';
+import Icon from '../mainComp/Icon.js';
+import '../mainComp/Icon.css';
+import '../mainComp/Main.css';
+import Schedule from './Schedule.js';
+import './Schedule.css';
+
 
 function CreatePlaylist() {
   const [imageSrc, setImageSrc] = useState(null);
   const [selectedImages, setSelectedImages] = useState([]);
   const [text, setText] = useState("");
   const fileInputRef = useRef(null);
+  const [isPopupOpen, setIsPopupOpen] = useState(false); 
+
+
+  const handlePopupOpen = () => {
+    setIsPopupOpen(!isPopupOpen);
+    console.log(isPopupOpen)
+  };
+
 
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
@@ -109,7 +121,18 @@ function CreatePlaylist() {
             setText(textInput);
           }}
         />
-        <button className="Schedulebtn">Schedule</button>
+
+        <button className="Schedulebtn" onClick={handlePopupOpen}>
+          Schedule Button
+        </button>
+        {isPopupOpen && (
+          <div className="popup">
+          <Schedule></Schedule>
+          </div>
+
+        )}
+      
+
         <button className="Exportbtn" onClick={handleExport}>
           Export
         </button>

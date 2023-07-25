@@ -5,7 +5,6 @@ import Playlist from '../playlistWidget/Playlist.js'
 import { useNavigate } from 'react-router-dom'
 import Icon from './Icon.js';
 import { Link, useLocation } from 'react-router-dom';
-import Popup from '../Popup';
 
 
 
@@ -54,9 +53,9 @@ export default function Main(){
             <Playlist></Playlist>
         </div>
 
-        <div className='Schedule'>
+        {/* <div className='Schedule'>
             <Popup></Popup>
-        </div>
+        </div> */}
 
     </div>
     )

@@ -3,15 +3,16 @@ import './App.css';
 import Main from './mainComp/Main.js';
 import Login from './loginComp/Login.js';
 import './loginComp/Login.css';
-import Popup from './Popup';
+
 
 import { Routes, Route } from "react-router-dom";
 import ViewPlaylist from './viewPlaylistComp/ViewPlaylist.js';
-import Schedule from './Schedule.js';
+import Schedule from './createPlaylistComp/Schedule';
 import StoresLocation from './storeLocationComp/StoresLocation'
 import Verification from './storeLocationComp/verification';
 import Banner from './bannerSelectionComp/Banner'
 import Gallery from './uploadWidget/Gallery'
+import CreatePlaylist from './createPlaylistComp/createPlaylist';
 // import {Routes, Route} from "react-router-dom";
 // import ViewPlaylist from './ViewPlaylist';
 
@@ -39,7 +40,7 @@ function App() {
 
         <Route path="/gallery" element={ <Gallery /> }/>
 
-          
+       <Route path="/createplaylist" element={<CreatePlaylist />} />
 
       </Routes>
 
