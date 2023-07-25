@@ -142,6 +142,7 @@
 }
   
 .s-list{
+  text-align: left;
   position: absolute;
   top: 50%;
   left: 32%;
@@ -160,3 +161,10 @@ input[type=checkbox] {
   font-size: 16px;
   
 } 
+
+.invalidMess{
+  white-space: nowrap;
+  position: absolute;
+  left:400%;
+  top: 50%;
+}

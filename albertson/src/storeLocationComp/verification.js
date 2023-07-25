@@ -14,13 +14,18 @@ const Verification = () => {
 
   const handleBack = () => {
     // Go back to the previous page
-    navigate('/sl')
-    //history.goBack();
+    navigate('/sl', {state: { storeList: state.storeList,
+                              storeName: state.storeName,
+                              user: state.user
+    }})
   };
 
   const handleSubmit = () => {
     // Add your submit logic here
-    navigate('/main')
+    navigate('/main', {state: { storeList: state.storeList, 
+                                storeName: state.storeName,
+                                user: state.user
+    }})
   };
 
   return (
@@ -31,20 +36,20 @@ const Verification = () => {
       <div className="right-side">
         {/* Content for the right side */}
         <div>
-          <h2>Verification Page</h2>
-          <h2> {selectedState}</h2>
+          <h2 className="headerLoc">Locations</h2>
           <p className='verify'>  Make sure your locations are correct before submitting.</p>
-          <p>Selected Store ID: {selectedStoreId}</p>
-          <div>
-            <p>Store Name: {state.storeName}</p>
-            <p>Store List:</p>
-          </div>
-          
+          <div className="infoBox">
+            <p className="storeName"><b>Store Name:</b> {state.storeName}</p>
+            <ul className="locationList">
+              {state.chosenLoc.map((store, index) =>
+                  <li>{store.location.address}, {store.location.city}, {store.location.state} {store.location.zip}   (SID: {store.id})</li>
+              )}
+            </ul>
+        </div>
+        
           <div className="button-container">
             <button className="back-button" onClick={handleBack}>Back</button>
             <button className="next-button" onClick={handleSubmit}>Submit</button>
-            {/* <Button variant="contained"  color="primary" className="back" onClick={handleBack}>Back</Button>
-            <Button  variant="contained"  color="primary" className="next" onClick={handleSubmit}>Submit</Button> */}
           </div>
         </div>
       </div>
