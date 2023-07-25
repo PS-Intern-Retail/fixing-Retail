@@ -15,8 +15,9 @@ const Gallery = () => {
 
   return (
     <div className="gallery-container">
-      <h4>All Uploads</h4>
+      {/* <h4>All Uploads</h4> */}
       <div className="image-grid">
+      <h4>All Uploads</h4>
         {images.map((image, index) => (
           <div className="image-item" key={index}>
             {image.url ? (
