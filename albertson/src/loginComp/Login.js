@@ -60,16 +60,16 @@ const Login = () => {
         <div className="left-side">
         </div>
         <div className="right-side">
-          <h1>Hi, welcome back!</h1>
-          <h4>Sign in with your company email</h4>
-          <input onChange={handleUserChange} className='email' placeholder='Email'></input>
-          <input onChange={handlePassChange} className='pass' placeholder='Password'></input>
-          <button className='forgetPass'>Forgot Password?</button>
-          {invalid && 
-            <div>
-              <h5>Incorrect username or password</h5>
-            </div>}
-          <button onClick={validateLogin} className='loginBtn'>Login</button> 
+            <h1>Hi, welcome back!</h1>
+            <h4>Sign in with your company email</h4>
+            <input onChange={handleUserChange} className='email' placeholder='Email'></input>
+            <input onChange={handlePassChange} className='pass' placeholder='Password'></input>
+            <button className='forgetPass'>Forgot Password?</button>
+            {invalid && 
+              <div>
+                <h5>Incorrect username or password</h5>
+              </div>}
+            <button onClick={validateLogin} className='loginBtn'>Login</button> 
         </div>
       </div>
     )

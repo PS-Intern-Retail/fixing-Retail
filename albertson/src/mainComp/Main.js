@@ -44,7 +44,7 @@ export default function Main(){
             </div> */}
 
         <div className='viewPlaylist'>
-            <Playlist></Playlist>
+            <Playlist storeName={storeName}></Playlist>
         </div>
     </div>
     )

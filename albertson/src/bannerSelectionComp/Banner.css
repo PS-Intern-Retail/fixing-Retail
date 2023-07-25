@@ -1,29 +1,36 @@
 .header{
     font-size: 35px;
-    position:absolute;
-    top: 15%;
-    left: 34%;
+    margin-top:10%;
+    /* position:absolute; */
+    margin-top: 3%;
+    margin-left: -50%;
 }
 
 .welcome{
-  position: absolute;
+  /* position: absolute;
   top: 0%;
-  left: 34%;
+  left: 34%; */
+  margin-top:6%;
+  margin-left:-51%;
   color: #20509C;
 }
 
 .subHeader{
   font-size: 20px;
   color: grey;
-  position: absolute;
+  margin-top:-1%;
+  margin-left:-42%
+  /* position: absolute;
   top: 25%;
-  left: 34%;
+  left: 34%; */
 }
 
 .storeList{
-  position: absolute;
+  /* position: absolute;
   top: 35%;
-  left: 33%;
+  left: 33%; */
+  margin-top: 1%;
+  margin-left: -60%;
   list-style: none;
   text-align: left;
 }
@@ -99,4 +106,33 @@
 	border-radius: 50%;
 	background: white;
   
+}
+
+@media screen and (max-width: 768px) {
+  .split-container {
+    flex-direction: column;
+  }
+
+  .right-side {
+    padding: 20px; /* Add padding to the right-side container for better spacing */
+  }
+
+  .header {
+    font-size: 28px; /* Reduce font size for smaller screens */
+    left: 20px; /* Adjust horizontal positioning for smaller screens */
+  }
+
+  .welcome {
+    font-size: 24px; /* Reduce font size for smaller screens */
+    left: 20px; /* Adjust horizontal positioning for smaller screens */
+  }
+
+  .subHeader {
+    font-size: 16px; /* Reduce font size for smaller screens */
+    left: 20px; /* Adjust horizontal positioning for smaller screens */
+  }
+
+  .storeList {
+    left: 20px; /* Adjust horizontal positioning for smaller screens */
+  }
 }

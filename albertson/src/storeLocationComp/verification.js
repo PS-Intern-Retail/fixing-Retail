@@ -22,7 +22,7 @@ const Verification = () => {
 
   const handleSubmit = () => {
     // Add your submit logic here
-    navigate('/main', {state: { storeList: state.storeList, 
+    navigate('/main', {state: { storeList: state.chosenLoc, 
                                 storeName: state.storeName,
                                 user: state.user
     }})

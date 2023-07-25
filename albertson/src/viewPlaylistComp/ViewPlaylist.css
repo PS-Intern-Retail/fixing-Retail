@@ -29,6 +29,7 @@
   .show-image1 .MuiCardMedia-root:nth-child(1),
   .show-image2 .MuiCardMedia-root:nth-child(2) {
     opacity: 1;
+    position: absolute;
   }
   
   .MuiCard-root {
@@ -51,12 +52,25 @@
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    width: 200%;
   }
-  
+
   .card {
-    margin: 0 10px;
+    margin: 0 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
   }
  
+  .card4{
+    position: absolute;
+    top: 50%;
+  }
   .card-title {
     background-color: #D9D9D9;
     color: black;
@@ -66,5 +80,6 @@
     margin-top: 10px;
     width: 100%;
     box-sizing: border-box;
+    font-size: 36px;
   }
   
