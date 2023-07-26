@@ -1,0 +1,144 @@
+.detailedDescrip{
+    padding: 10px;
+    width: 45%;
+    height: 42%;
+    background-color: #EAEAEA;
+    border: 3px solid #EAEAEA;
+    border-radius: 18px;
+    position: absolute;
+    top: 7%;
+    left: 1%;
+}
+
+.reccomendations{
+    padding: 10px;
+    width: 43.5%;
+    height: 53%;
+    background-color: #FFFFFF;
+    border: 3px solid #FFFFFF;
+    border-radius: 18px;
+    position: absolute;
+    top: 7%;
+    left: 52%;
+    overflow-y: scroll;
+}
+
+.generateBtn{
+    padding: 10px;
+    width: 49%;
+    height: 8.5%;
+    background-color: #20509C;
+    border: 3px solid #20509C;
+    border-radius: 14px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    top: 56.5%;
+    left: 1%;
+}
+
+.generateBtn:hover{
+    background-color: #3568ba;
+}
+
+.firstText{
+    position: absolute;
+    top: -3%;
+    left: 2%;
+}
+
+.secondText{
+    position: absolute;
+    top: -3%;
+    left: 53%;
+}
+
+.thirdText{
+    position: absolute;
+    top: 64%;
+    left: 2%;
+}
+
+.location{
+    padding: 5px;
+    border-radius: 12px;
+    border: 2px solid white;
+    width: 61%;
+    position: absolute;
+    left: 37%;
+}
+
+.age{
+    padding: 5px;
+    border-radius: 12px;
+    border: 2px solid white;
+    width: 57%;
+    position: absolute;
+    left: 37%; 
+    top: 23.5%;
+}
+
+.productCategory{
+    padding: 5px;
+    border-radius: 12px;
+    border: 2px solid white;
+    width: 57%;
+    position: absolute;
+    left: 37%; 
+    top: 43.5%;
+}
+
+.weather{
+    padding: 5px;
+    border-radius: 12px;
+    border: 2px solid white;
+    width: 57%;
+    position: absolute;
+    left: 37%; 
+    top: 63.5%;
+}
+
+.holiday{
+    padding: 5px;
+    border-radius: 12px;
+    border: 2px solid white;
+    width: 57%;
+    position: absolute;
+    left: 37%; 
+    top: 82.5%;
+}
+
+.locName{
+    position:absolute;
+    top: -5%;
+    left: 5%;
+}
+
+.ageName{
+    position: absolute;   
+    top: 12%;
+    left:10%;
+}
+
+.productName{
+    position: absolute;
+    top: 29%;
+    left: 5%;
+    font-size: 18px;
+    text-align: center;
+}
+
+.weatherName{
+    position: absolute; 
+    top: 55%;
+    left: 6%;
+}
+
+.holidayName{
+    position: absolute;
+    top: 73%; 
+    left: 7%; 
+}
+
