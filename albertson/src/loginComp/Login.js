@@ -28,10 +28,10 @@ const Login = () => {
         email: user,
         password: pass,
       });
-  
+
       if (currUser !== undefined) {
         // alert("Success!");
-        navigate('/main', {state: {user: currUser}})
+        navigate('/banner', {state: {user: currUser}})
         console.log("This is the current User:", currUser);
         valid = true;
         const users = await Database.getAllUsers();
@@ -64,7 +64,7 @@ const Login = () => {
           <h4>Sign in with your company email</h4>
           <input onChange={handleUserChange} className='email' placeholder='Email'></input>
           <input onChange={handlePassChange} className='pass' placeholder='Password'></input>
-          <button className='forgetPass'>Forget Password?</button>
+          <button className='forgetPass'>Forgot Password?</button>
           {invalid && 
             <div>
               <h5>Incorrect username or password</h5>

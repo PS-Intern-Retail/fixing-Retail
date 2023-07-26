@@ -20,17 +20,32 @@
   }
   
   h3 {
-    font-size: 20px;
+    font-size: 60px;
     margin-bottom: 16px;
   }
-  
+
+.locSelect{
+    font-size: 35px;
+    position:absolute;
+    top: 15%;
+    left: 34%;
+}
+
+.subheader{
+  font-size: 20px;
+  color: grey;
+  position: absolute;
+  top: 28%;
+  left: 34%;
+}
+
 .search-bar {
   display: flex;
   align-items: center;
-  width: 200%;
   margin-bottom: 24px;
   position: absolute;
-  top: 15%;
+  top: 40%;
+  left: 21%;
 }
 
 .search-input-container {
@@ -40,15 +55,15 @@
 }
 
 .search-input {
-  width: 100%;
+  width: 100px;
 }
+
 .search-bar {
   display: flex;
-  width: 196px;
+  width: 900px;
   height: 51px;
   flex-direction: column;
   justify-content: center;
-  
 }
 
 .search-input-container {
@@ -62,42 +77,94 @@
   width:  600%;
 }
 
-  .search-icon {
+.search-icon {
     margin-right: 8px;
-  }
+}
   
-  
-  
-  .button-container {
+.button-container {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    max-width: 300px;
-  }
+}
   
-  .back-button {
-    display: flex;
-    align-items: center;
-    margin-right: 16px;
-  }
+.back-button {
+  padding:10px;
+  border: 3px solid #20509C;
+  border-radius:13px;
+  outline:none;
+  width: 33%;
+  height: 7%;
+  background-color: #F5F5F5;
+  position: absolute;
+  top: 89%;
+  left: 31.5%;
+  font-size: 20px;
+  justify-content: center;
+  color: #20509C;
+  font-weight: bold;
+}
+
+.back-button:hover{
+  background-color: #dfebff;
+}
   
-  .next-button {
-    display: flex;
-    align-items: center;
-    margin-left: 16px;
-  }
+.next-button {
+  padding:10px;
+  border: 3px solid #20509C;
+  border-radius:13px;
+  outline:none;
+  width: 33%;
+  height: 7%;
+  background-color: #20509C;
+  position: absolute;
+  top: 89%;
+  left: 64.5%;
+  font-size: 20px;
+  justify-content: center;
+  color: #EAEAEA;
+  font-weight: bold;
+}
+
+.next-button:hover{
+  background-color: #0e326b;
+}
   
-  .button-text {
+.button-text {
     color: #20509C;
     text-align: center;
     font-family: Inter;
     font-size: 12px;
     font-weight: 700;
     line-height: normal;
-  }
+}
   
-  .next-button .button-text {
+.next-button .button-text {
     color: #FFF;
-  }
+}
   
+.s-list{
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 32%;
+  list-style: none;
+}
+
+input[type=checkbox] {
+  transform: scale(1.5);
+}
+
+.listEle{
+  margin-top: 10px;
+}
+
+.checktext{
+  font-size: 16px;
   
+} 
+
+.invalidMess{
+  white-space: nowrap;
+  position: absolute;
+  left:400%;
+  top: 50%;
+}

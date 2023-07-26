@@ -12,14 +12,33 @@
     border: 1px solid gray;
     border-radius: 6px;
     z-index: 9999;    
-  }
-  
+}
+
 .icon{
-    height: 8%;
+    height: 51px;
     width: 4%;
     position: absolute;
     top: 2.5%;
     left: 94%;
+}
+
+.logo{
+    height: auto;
+    max-width: 100px;
+}
+
+.logo-container{
+    /* position: relative;
+    left: 1%;
+    top: 10%; */
+    /* position: relative;
+    top: 5%;
+    left: 1%;
+    transform: translate(-1%, -5%); */
+    position: absolute;
+    left: 1%;
+    top: 40px;
+    transform: translateY(-50%);
 }
 
 .option {
@@ -37,7 +56,7 @@
 }
 
 .small-icon {
-    width: 18px; 
-    height: 18px; 
-    margin-right: 8px; 
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
 }
