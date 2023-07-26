@@ -81,8 +81,8 @@ export default function ViewPlaylist() {
     },
   ];
 
-  const topCampaigns = campaigns.slice(0, 3); // Select the first three campaigns
-  const bottomCampaigns = campaigns.slice(3, 6); // Select the last three campaigns
+  const topCampaigns = campaigns.slice(0, 3); 
+  const bottomCampaigns = campaigns.slice(3, 6); 
 
   return (
     <div className="card-container">
