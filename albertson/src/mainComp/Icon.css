@@ -15,17 +15,17 @@
 }
 
 .icon{
-    height: 52px;
-    width: 52px;
+    height: 4vw;
+    width: 4vw;
     position: absolute;
-    top: 3.5%;
+    top: 3%;
     right: 1.5%;
 }
 
 @media (max-width: 1000px){
     .icon{
-        height: 52px;
-        width: 52px;
+        height: 3vw;
+        width: 3vw;
         position: absolute;
         top: 3.5%;
         right: 1.5%;
