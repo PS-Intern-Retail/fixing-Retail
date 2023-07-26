@@ -93,6 +93,8 @@ const StoreLocation = () => {
       </div>
       <div className="right-side">
         <div className="search-bar-wrapper">
+        <h3 className="locSelect">Location Selection</h3>
+          <p className="subheader">Search for banner locations. You may select multiple locations.</p>
           <div className="search-bar">
             <Autocomplete
               options={stateOptions}
@@ -124,8 +126,6 @@ const StoreLocation = () => {
           </div>
         </div>
         <div className="store-list">
-          <h3 className="locSelect">Location Selection</h3>
-          <p className="subheader">Search for banner locations. You may select multiple locations.</p>
           <ul className="s-list">
             {(storeList.length === 0) ? <h4 className="invalidMess">You have no stores available to you in this state</h4>:
             storeList.map((store, index) => (

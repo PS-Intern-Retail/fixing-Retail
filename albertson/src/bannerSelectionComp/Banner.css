@@ -1,8 +1,8 @@
 .header{
-    font-size: 35px;
+    font-size: 3.5vw;
     margin-top:10%;
     /* position:absolute; */
-    margin-top: 3%;
+    margin-top: 0%;
     margin-left: -50%;
 }
 
@@ -10,16 +10,17 @@
   /* position: absolute;
   top: 0%;
   left: 34%; */
-  margin-top:6%;
-  margin-left:-51%;
+  font-size: 4vw;
+  margin-top:7%;
+  margin-left:-43%;
   color: #20509C;
 }
 
 .subHeader{
-  font-size: 20px;
+  font-size: 1.8vw;
   color: grey;
   margin-top:-1%;
-  margin-left:-42%
+  margin-left:-45%
   /* position: absolute;
   top: 25%;
   left: 34%; */
@@ -36,7 +37,7 @@
 }
 
 .storeNames{
-  font-size: 20px;
+  font-size: 5vw;
 }
 
 .container {
@@ -113,26 +114,61 @@
     flex-direction: column;
   }
 
-  .right-side {
-    padding: 20px; /* Add padding to the right-side container for better spacing */
+  .left-side,
+    .right-side {
+      flex: 1;
+      width: 100%;
   }
 
   .header {
-    font-size: 28px; /* Reduce font size for smaller screens */
-    left: 20px; /* Adjust horizontal positioning for smaller screens */
+    font-size: 4vw; /* Reduce font size for smaller screens */
+    margin-left: -55%; /* Adjust horizontal positioning for smaller screens */
   }
 
   .welcome {
-    font-size: 24px; /* Reduce font size for smaller screens */
-    left: 20px; /* Adjust horizontal positioning for smaller screens */
+    font-size: 5vw; /* Reduce font size for smaller screens */
+    margin-left: -45%; /* Adjust horizontal positioning for smaller screens */
+    margin-top: 1%;
+  }
+
+  .subHeader {
+    font-size: 2.5vw; /* Reduce font size for smaller screens */
+    margin-left: -50%; /* Adjust horizontal positioning for smaller screens */
+  }
+
+  .storeList {
+    left: 5vw; /* Adjust horizontal positioning for smaller screens */
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .split-container {
+    flex-direction: column;
+  }
+
+  .left-side,
+    .right-side {
+      flex: 1;
+      width: 100%;
+  }
+
+  .header {
+    font-size: 4vw; /* Reduce font size for smaller screens */
+    margin-left: -45%; /* Adjust horizontal positioning for smaller screens */
+  }
+
+  .welcome {
+    font-size: 5vw; /* Reduce font size for smaller screens */
+    margin-left: -40%; /* Adjust horizontal positioning for smaller screens */
+    margin-top: 1.5%;
   }
 
   .subHeader {
     font-size: 16px; /* Reduce font size for smaller screens */
-    left: 20px; /* Adjust horizontal positioning for smaller screens */
+    margin-left: -30%; /* Adjust horizontal positioning for smaller screens */
   }
 
   .storeList {
-    left: 20px; /* Adjust horizontal positioning for smaller screens */
+    margin-left: -50%; /* Adjust horizontal positioning for smaller screens */
   }
 }

@@ -25,27 +25,24 @@
   }
 
 .locSelect{
-    font-size: 35px;
-    position:absolute;
-    top: 15%;
-    left: 34%;
+    font-size: 5vw;
+    margin-top: 10%;
+    margin-left: -28%;
 }
 
 .subheader{
-  font-size: 20px;
+  font-size: 2vw;
   color: grey;
-  position: absolute;
-  top: 28%;
-  left: 34%;
+  margin-left: -10%;
+  margin-top:1%;
 }
 
 .search-bar {
   display: flex;
   align-items: center;
   margin-bottom: 24px;
-  position: absolute;
-  top: 40%;
-  left: 21%;
+  margin-left:-9%;
+  margin-top: 3%;
 }
 
 .search-input-container {
@@ -55,7 +52,7 @@
 }
 
 .search-input {
-  width: 100px;
+  width: 0vw;
 }
 
 .search-bar {
@@ -143,9 +140,8 @@
   
 .s-list{
   text-align: left;
-  position: absolute;
-  top: 50%;
-  left: 32%;
+  margin-top:1%;
+  margin-left: -38%;
   list-style: none;
 }
 
@@ -154,19 +150,21 @@ input[type=checkbox] {
 }
 
 .listEle{
-  margin-top: 10px;
+  margin-top: 2%;
 }
 
 .checktext{
   font-size: 16px;
+  margin-top:1%;
   
 } 
 
 .invalidMess{
   white-space: nowrap;
-  position: absolute;
-  left:400%;
-  top: 50%;
+  font-size: 1.3vw;
+  color:grey;
+  margin-top:10%;
+  margin-left: 30%;
 }
 
 @media screen and (max-width: 768px) {
@@ -182,11 +180,134 @@ input[type=checkbox] {
 
   .back-button{
     margin-left:-30%;
+    margin-top: 6%;
+    width:48%;
+    height: 5%;
+    font-size: 2vw;
+  }
+
+  .next-button{
+    width: 48%;
+    left: 48.5%;
+    margin-top: 6%;
+    height: 5%;
+    font-size: 2vw;
+  }
+
+  .locSelect{
+    font-size: 4vw;
+    /* margin-top: 3%; */
+    margin-left: -35%;
+    margin-top: 1%;
+}
+
+  .subheader{
+    font-size: 2vw;
+    color: grey;
+    margin-left: -21%;
+    margin-top:0%;
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    margin-left:3%;
+    margin-top: 3%;
+  }
+
+.s-list{
+  text-align: left;
+  margin-top:1%;
+  margin-left: -10%;
+  list-style: none;
+}
+
+.listEle{
+  margin-top: 2%;
+}
+
+.checktext{
+  font-size: 16px;
+  margin-top:1%;
+  
+} 
+
+.invalidMess{
+  white-space: nowrap;
+  font-size: 1.3vw;
+  color:grey;
+  margin-top:10%;
+  margin-left: 30%;
+}
+}
+
+@media screen and (max-width: 480px) {
+  .split-container {
+    flex-direction: column;
+  }
+
+  .left-side,
+    .right-side {
+      flex: 1;
+      width: 100%;
+  }
+
+  .back-button{
+    margin-left:-30%;
+    margin-top: 2%;
     width:48%;
   }
 
   .next-button{
     width: 48%;
     left: 48.5%;
+    margin-top: 2%;
   }
+
+  .locSelect{
+    font-size: 5vw;
+    margin-top: 3%;
+    margin-left: -30%;
+}
+
+  .subheader{
+    font-size: 2.7vw;
+    color: grey;
+    margin-left: -13%;
+    margin-top:1%;
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    margin-left:6%;
+    margin-top: 3%;
+  }
+
+  .s-list{
+    text-align: left;
+    margin-top:1%;
+    margin-left: -20%;
+    list-style: none;
+  }
+
+  .listEle{
+    margin-top: 2%;
+  }
+
+.checktext{
+  font-size: 3.3vw;
+  margin-top:1%;
+  
+} 
+
+.invalidMess{
+  white-space: nowrap;
+  font-size: 1.3vw;
+  color:grey;
+  margin-top:10%;
+  margin-left: 30%;
+}
 }

@@ -60,8 +60,8 @@ const Login = () => {
         <div className="left-side">
         </div>
         <div className="right-side">
-            <h1>Hi, welcome back!</h1>
-            <h4>Sign in with your company email</h4>
+            <h1 className="headerLogin">Hi, welcome back!</h1>
+            <h4 className="subLogin">Sign in with your company email</h4>
             <input onChange={handleUserChange} className='email' placeholder='Email'></input>
             <input onChange={handlePassChange} className='pass' placeholder='Password'></input>
             <button className='forgetPass'>Forgot Password?</button>

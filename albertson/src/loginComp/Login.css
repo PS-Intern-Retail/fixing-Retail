@@ -22,15 +22,16 @@
     text-align: center;
   }
   
-  h1 {
-    font-size: 80px;
+  .headerLogin {
+    font-size: 4vw;
     text-align: right;
-    margin-top: 15%;
+    margin-top: 12%;
   }
   
-  h4 {
+  .subLogin {
     color: grey;
     margin-top: -1%;
+    font-size: 2vw;
   }
   
   h5 {
@@ -41,40 +42,40 @@
   }
   
   .email{
-    padding: 10px;
-    border: 3px solid #eaeaea;
+    padding: 1vw;
+    border: 0vw solid #eaeaea;
     border-radius: 15px;
     outline: none;
     width: 100%;
-    max-width: 375px;
+    max-width: 30vw;
     text-align: center;
     background-color: #eaeaea;
     margin-top: 2%;
   }
 
   .pass {
-    padding: 10px;
-    border: 3px solid #eaeaea;
+    padding: 1vw;
+    border: 0vw solid #eaeaea;
     border-radius: 15px;
     outline: none;
     width: 100%;
-    max-width: 375px;
+    max-width: 30vw;
     text-align: center;
     background-color: #eaeaea;
     margin-top: 2%;
   }
   
   .loginBtn {
-    padding: 10px;
-    border: 3px solid #20409c;
+    padding: 1vw;
+    border: 0vw solid #20409c;
     border-radius: 15px;
     outline: none;
     width: 100%;
-    max-width: 400px;
+    max-width: 35vw;
     height: 8%;
     text-align: center;
     background-color: #20409c;
-    font-size: 20px;
+    font-size: 1.5vw;
     color: white;
     font-weight: bold;
     margin-top: 2%;
@@ -113,8 +114,98 @@
       width: 100%;
     }
 
+    .headerLogin{
+      margin-top: 8%;
+      margin-left: -5%;
+      font-size: 5vw;
+    }
+
+    .subLogin{
+      margin-top: 0%;
+      margin-left: -5.6%;
+      font-size: 2.5vw;
+    }
+
+    .email{
+      margin-top: 1%;
+      margin-left: -5.6%;
+      width: 100%;
+      max-width: 40vw;
+    }
+
+    .pass{
+      margin-top: 1%;
+      margin-left: -5.6%;
+      width: 100%;
+      max-width: 40vw;
+    }
+
+    .forgetPass{
+      margin-top: 1%;
+      margin-left: 25%;
+    }
     .loginBtn{
         text-align: center;
+        margin-top: 2%;
+        margin-left: -5.6%;
+        width: 100%;
+        max-width: 45vw;
+        height: 6vw;
+        font-size: 2.5vw;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .split-container {
+      flex-direction: column;
+    }
+  
+    .left-side,
+    .right-side {
+      flex: 1;
+      width: 100%;
+    }
+
+    .headerLogin{
+      margin-top: 8%;
+      margin-left: -10%;
+      font-size: 7vw;
+    }
+
+    .subLogin{
+      margin-top: -2%;
+      margin-left: -9%;
+      font-size: 3.5vw;
+    }
+
+    .email{
+      margin-top: 1%;
+      margin-left: -10%;
+      width: 100%;
+      max-width: 50vw;
+    }
+
+    .pass{
+      margin-top: 2%;
+      margin-left: -10%;
+      width: 100%;
+      max-width: 50vw;
+    }
+
+    .forgetPass{
+      margin-top: 1%;
+      margin-left: 25%;
+      font-size: 2.5vw;
+    }
+
+    .loginBtn{
+        text-align: center;
+        margin-top: 3%;
+        margin-left: -10%;
+        width: 100%;
+        max-width: 60vw;
+        height: 7vw;
+        font-size: 2.5vw;
     }
   }
   

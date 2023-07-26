@@ -68,57 +68,146 @@
   }
   
   .verify {
-    font-size: 20px;
+    font-size: 1.5vw;
     color: grey;
-    position: absolute;
-    top: 28%;
-    left: 32%;
+    margin-top: 3%;
+    margin-left: -65%;
   }
 
   .storeName{
-    position: absolute;
-    left: 5%;
-    top: 0%;
-    font-size: 110%;
+    margin-top: 2%;
+    font-size: 1.5vw;
     color: #20509C;
+    padding: 1vw;
+    border: 0.3vw solid #20509C;
   }
-
   .headerLoc{
-    position:absolute;
-    left: 32%;
-    top: 15%;
-    font-size: 250%;
+    margin-top: 20%;
+    margin-left: -120%;
+    font-size: 4vw;
   }
 
   .locationList{
-    position: absolute;
-    left: 5%;
-    top: 25%;
+    margin-top: 3%;
     text-align: left;
-    font-size: 110%;
+    font-size: 1.3vw;
   }
-/* 
-  .storeListTitle{
-    position: absolute;
-    left: 15%;
-    top: 35%;
-  } */
 
   .infoBox {
     background-color: lightblue;
-    padding: 20px;
+    padding: 2vw;
     border-radius: 8px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top:38%;
-    left:33%;
-    height: 18%;
-    width: 36%;
+    margin-top: 1%;
+    margin-left: -30%;
+    height: 8vw;
+    width: 35vw;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
-
+@media screen and (max-width: 768px) {
+    .split-container {
+        flex-direction: column;
+    }
   
+    .left-side,
+      .right-side {
+        flex: 1;
+        width: 100%;
+    }
+    .verify {
+      font-size: 1.5vw;
+      color: grey;
+      margin-top: 3%;
+      margin-left: -85%;
+    }
+  
+    .storeName{
+      margin-top: 2%;
+      font-size: 1.5vw;
+      color: #20509C;
+      padding: 1vw;
+      border: 0.3vw solid #20509C;
+    }
+    .headerLoc{
+      margin-top: 1%;
+      margin-left: -120%;
+      font-size: 4vw;
+    }
+  
+    .locationList{
+      margin-top: 3%;
+      text-align: left;
+      font-size: 1.6vw;
+    }
+  
+    .infoBox {
+      background-color: lightblue;
+      padding: 2vw;
+      border-radius: 8px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+      margin-top: 1%;
+      margin-left: -30%;
+      height: 10vw;
+      width: 50vw;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+  .split-container {
+      flex-direction: column;
+  }
+
+  .left-side,
+    .right-side {
+      flex: 1;
+      width: 100%;
+  }
+  .verify {
+    font-size: 3.5vw;
+    color: grey;
+    margin-top: 3%;
+    margin-left: -10%;
+  }
+
+  .storeName{
+    margin-top: 2%;
+    font-size: 3.8vw;
+    color: #20509C;
+    padding: 1vw;
+    border: 0.3vw solid #20509C;
+  }
+  .headerLoc{
+    margin-top: 1%;
+    margin-left: -70%;
+    font-size: 7vw;
+  }
+
+  .locationList{
+    margin-top: 3%;
+    text-align: left;
+    font-size: 3.3vw;
+  }
+
+  .infoBox {
+    background-color: lightblue;
+    padding: 2vw;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 1%;
+    margin-left: -4%;
+    height: 20vw;
+    width: 90vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
