@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import './Icon.css';
+import ViewSchedulePopup from './ViewSchedulePopup';
 import { useNavigate } from 'react-router-dom'
 
 export default function Icon(props){ //props param to pass in store name from main
@@ -26,10 +27,8 @@ export default function Icon(props){ //props param to pass in store name from ma
     const amigos="https://www.amigosunited.com/Themes/Amigos5/Content/Images/Default-Logo.png";
     const albertsonsMarketStreet="https://www.instacart.com/assets/domains/store_configuration/logo/170/white_label_landing_page_d1036021-fe23-404c-b403-b9e7eb3b6750.png";
 
-    const actualStore=props.storeName; //currently selected store; props.storename
+    const actualStore=props.storeName; //currently selected store
     let storeLink; //correct store link
-
-//may need to change whats after ===
 
     if (actualStore === "Albertsons") {
         storeLink = albertsons;
@@ -73,13 +72,14 @@ export default function Icon(props){ //props param to pass in store name from ma
         storeLink = amigos;
     } else if(actualStore==="Acme"){
         storeLink=acme;
-    }
-    else { //else if (actualStore === "albertsonsMarketStreet")
+    } else { 
         storeLink = albertsonsMarketStreet;
     }
 
     const navigate = useNavigate()
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isPopupOpen, setPopupOpen] = useState(false);
+    const [popupContent, setPopupContent] = useState('');
 
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
@@ -90,8 +90,13 @@ export default function Icon(props){ //props param to pass in store name from ma
     }
 
     const handleViewButtonClick = () => {
-        console.log('view');
+        const content = 'This is the content of the popup!';
+        setPopupOpen(true);
+        setPopupContent(content);
     }
+    const handleClosePopup = () => {
+        setPopupOpen(false);
+    };
 
     const handleProfileButtonClick = () => {
         console.log('profile');
@@ -106,7 +111,7 @@ export default function Icon(props){ //props param to pass in store name from ma
             <div class="logo-container">
                 <img
                     className="logo"
-                    src = {storeLink} //change here to storeLink
+                    src = {storeLink}
                     alt="Store Logo"
                 />
             </div>
@@ -149,6 +154,7 @@ export default function Icon(props){ //props param to pass in store name from ma
                         />
                         <span className="option-text">Logout</span>
                     </div>
+                    <ViewSchedulePopup isOpen={isPopupOpen} onClose={handleClosePopup} content={popupContent} />
                 </div>
             )}
         </div>
