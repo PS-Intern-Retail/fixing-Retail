@@ -3,16 +3,17 @@ import './App.css';
 import Main from './mainComp/Main.js';
 import Login from './loginComp/Login.js';
 import './loginComp/Login.css';
-import logo from './images/logo.svg';
+
 
 import { Routes, Route } from "react-router-dom";
 import ViewPlaylist from './viewPlaylistComp/ViewPlaylist';
-import Schedule from './Schedule.js';
+import Schedule from './createPlaylistComp/Schedule.js';
 import StoresLocation from './storeLocationComp/StoresLocation'
 import Verification from './storeLocationComp/verification';
 import Banner from './bannerSelectionComp/Banner'
 import Gallery from './uploadWidget/Gallery'
 import ViewSchedule from './viewScheduleComp/ViewSchedule'
+import CreatePlaylist from './createPlaylistComp/createPlaylist';
 // import {Routes, Route} from "react-router-dom";
 // import ViewPlaylist from './ViewPlaylist';
 
@@ -29,6 +30,8 @@ function App() {
         <Route path="/banner" element={ <Banner /> }/>
         <Route path="/gallery" element={ <Gallery /> }/>
         <Route path="/viewschedule" element={ <ViewSchedule /> }/>
+        <Route path="/createplaylist" element={ <CreatePlaylist /> }/>
+
       </Routes>
     </div>
   );
