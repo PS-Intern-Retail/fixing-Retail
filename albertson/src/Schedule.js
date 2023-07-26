@@ -14,14 +14,11 @@ const Schedule = () => {
   const [uploadSuccess, setUploadSuccess] = useState(false);
 
   const handleSchedule = () => {
-    // Perform scheduling logic here
-    // Simulating upload success for demonstration
+    
     setUploadSuccess(true);
     setShowModal(true);
 
-    // Simulating upload failure for demonstration
-    // setUploadSuccess(false);
-    // setShowModal(true);
+    
   };
 
   const closeModal = () => {

@@ -6,10 +6,11 @@ import Gallery from "./uploadWidget/Gallery";
 import TextFieldsIcon from "@mui/icons-material/TextFields";
 
 function CreatePlaylist() {
-  const [text, setText] = useState({ text: "", color: "#ffffff" }); // Initialize text with empty string and default color
+  const [text, setText] = useState({ text: "", color: "#ffffff" });
   const [showColorPicker, setShowColorPicker] = useState(false);
   const [dragging, setDragging] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [title, setTitle] = useState("Enter a title");
 
   const contentRef = useRef();
   const textOverlayRef = useRef();
@@ -30,17 +31,14 @@ function CreatePlaylist() {
       textOverlay.style.color = text.color || "white"; // Set default color to white
       textOverlay.style.textShadow = "1px 1px 2px rgba(0, 0, 0, 0.8)";
 
-      // Append the text overlay to each image
       content.childNodes.forEach((child) => {
         if (child.tagName === "IMG") {
           child.parentElement.appendChild(textOverlay.cloneNode(true));
         }
       });
 
-      // Export the content with images and text overlays
       html2pdf().from(content).save("exported_image.pdf");
 
-      // Remove the text overlays from the images
       const textOverlays = document.querySelectorAll(".image-item div");
       textOverlays.forEach((overlay) => overlay.remove());
     } else {
@@ -64,6 +62,13 @@ function CreatePlaylist() {
   const handleTextDrag = (e) => {
     if (dragging) {
       setPosition({ x: e.clientX, y: e.clientY });
+    }
+  };
+
+  const handleEnterTitle = () => {
+    const textInput = window.prompt("Enter your title:", title);
+    if (textInput !== null) {
+      setTitle(textInput);
     }
   };
 
@@ -95,7 +100,9 @@ function CreatePlaylist() {
             </div>
           )}
         </div>
-        Independence day
+        <span onClick={handleEnterTitle} style={{ cursor: "pointer" }}>
+          {title}
+        </span>
         <TextFieldsIcon
           onClick={() => {
             const textInput = window.prompt("Enter your text:", text.text);
