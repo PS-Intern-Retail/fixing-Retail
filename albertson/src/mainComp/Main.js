@@ -29,9 +29,9 @@ export default function Main(){
                 <Uploader></Uploader> 
             </div>
 
-        <div className='viewPlaylist'>
-            <Playlist storeName={storeName}></Playlist>
+            <div className='viewPlaylist'>
+                <Playlist storeName={storeName}></Playlist>
+            </div>
         </div>
-    </div>
     )
 }
