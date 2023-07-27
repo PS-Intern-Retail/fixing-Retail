@@ -32,6 +32,9 @@ export default function Main(){
             <div className='viewPlaylist'>
                 <Playlist storeName={storeName}></Playlist>
             </div>
+            <div className='Schedule'>
+              <Popup></Popup>
+            </div>
         </div>
     )
 }
