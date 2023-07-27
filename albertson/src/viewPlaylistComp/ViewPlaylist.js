@@ -1,12 +1,15 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
+import Icon from '../mainComp/Icon.js'
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import { useLocation } from 'react-router-dom'
 import './ViewPlaylist.css'; // Import the CSS file for component-specific styles
 
-export default function ViewPlaylist() {
+export default function ViewPlaylist(props) {
   const [showImage1, setShowImage1] = React.useState(true);
+  const { state } = useLocation()
 
   React.useEffect(() => {
     const timer = setInterval(() => {
@@ -81,14 +84,15 @@ export default function ViewPlaylist() {
     },
   ];
 
-  const topCampaigns = campaigns.slice(0, 3); 
-  const bottomCampaigns = campaigns.slice(3, 6); 
+  const topCampaigns = campaigns.slice(0, 3); // Select the first three campaigns
+  const bottomCampaigns = campaigns.slice(3, 6); // Select the last three campaigns
 
   return (
     <div className="card-container">
+      <Icon storeName={props.storeName}></Icon>
       <div className="top-cards">
         {topCampaigns.map((campaign, index) => (
-          <Card key={index} className="card" sx={{ height: '100%', maxWidth: 345 }}>
+          <Card key={index} className="card" sx={{ height: 250, width: 260 }}>
             <div className="image-container">
               <div className={`image ${showImage1 ? 'show-image1' : 'show-image2'}`}>
                 <CardMedia

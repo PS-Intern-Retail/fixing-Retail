@@ -7,8 +7,6 @@ import { useNavigate } from 'react-router-dom'
 import Icon from './Icon.js';
 import { Link, useLocation } from 'react-router-dom';
 
-
-
 export default function Main(){
     const { state } = useLocation()
 
@@ -21,9 +19,8 @@ export default function Main(){
         storeList = state.storeList
     }
 
-    console.log(storeList)
     return(
-        <div>
+        <div className="mainDiv">
             <Icon storeName={storeName} user={user}/>
             <div className='AI_GenBox'>
                 <AiComp storeList={storeList}></AiComp>
@@ -32,25 +29,12 @@ export default function Main(){
                 <Uploader></Uploader> 
             </div>
 
-            {/* <div className='viewPlaylist'>  
-                <button className="viewPlaylistBtn">View All Playlists</button>
-            </div>
-
             <div className='viewPlaylist'>
-                <button className="viewPlaylistBtn"
-                onClick={navigateToPlaylist}
-                >View All Playlists
-                </button>
-            </div> */}
-
-        <div className='viewPlaylist'>
-            <Playlist></Playlist>
+                <Playlist storeName={storeName}></Playlist>
+            </div>
+            <div className='Schedule'>
+              <Popup></Popup>
+            </div>
         </div>
-
-        {/* <div className='Schedule'>
-            <Popup></Popup>
-        </div> */}
-
-    </div>
     )
 }

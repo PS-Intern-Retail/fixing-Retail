@@ -15,11 +15,21 @@
 }
 
 .icon{
-    height: 51px;
-    width: 4%;
+    height: 4vw;
+    width: 4vw;
     position: absolute;
-    top: 2.5%;
-    left: 94%;
+    top: 3%;
+    right: 1.5%;
+}
+
+@media (max-width: 1000px){
+    .icon{
+        height: 3vw;
+        width: 3vw;
+        position: absolute;
+        top: 3.5%;
+        right: 1.5%;
+    }
 }
 
 .logo{

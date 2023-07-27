@@ -2,13 +2,11 @@ import React from 'react';
 import './Playlist.css';
 import { useNavigate } from 'react-router-dom';
 
-const Playlister = () => {
+const Playlister = (props) => {
   const navigate = useNavigate();
-
   const navigateToPlaylist = () => {
-    navigate('/viewplaylist');
+    navigate('/viewplaylist', {state: {storeName: props.storeName}});
   };
-
 
   return (
     <main>
